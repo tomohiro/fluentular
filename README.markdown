@@ -1,6 +1,13 @@
 Fluentd Regexp Checker
 ================================================================================
 
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Tomohiro/fluentd_regexp_checker)
+
+---
+
+
+![Fluentd Regexp Checker SS](http://cl.ly/image/3w2R1a0B340P/fluentd-regexp-checker-ss.png)
+
 
 Inspired
 -------------------------------------------------------------------------------
