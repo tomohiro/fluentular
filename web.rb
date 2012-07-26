@@ -62,9 +62,6 @@ __END__
           Hosted on
           %a(href='http://heroku.com') Heroku
 
-    %script(src='javascripts/foundation.js')
-    %script(src='javascripts/app.js')
-
 @@ index
 %section.row
   %form(method='GET' action='/parse')
@@ -81,12 +78,12 @@ __END__
     %div.panel.radius
       %h4 Regexp sample
       %h5
-        %i.icon-comment
+        %i.icon-check
         Apache
       %code
         ^(?&lt;host&gt;[^ ]*) [^ ]* (?&lt;user&gt;[^ ]*) \[(?&lt;time&gt;[^\]]*)\] "(?&lt;method&gt;\S+)(?: +(?&lt;path&gt;[^ ]*) +\S*)?" (?&lt;code&gt;[^ ]*) (?&lt;size&gt;[^ ]*)(?: "(?&lt;referer&gt;[^\"]*)" "(?&lt;agent&gt;[^\"]*)")?$
       %h5
-        %i.icon-comment
+        %i.icon-check
         Syslog
       %code
         ^(?&lt;time&gt;[^ ]* [^ ]* [^ ]*) (?&lt;host&gt;[^ ]*) (?&lt;ident&gt;[a-zA-Z0-9_\/\.\-]*)(?:\[(?&lt;pid&gt;[0-9]+)\])?[^\:]*\: *(?&lt;message&gt;.*)$
@@ -96,8 +93,9 @@ __END__
   %section.twelve.columns
     %table.twelve
       %thead
-        %th.four Key
-        %th.eight Value
+        %tr
+          %th.four Key
+          %th.eight Value
       %tbody
       - if @parsed
         - @parsed.each do |key, value|
