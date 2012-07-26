@@ -1,0 +1,20 @@
+body {
+  border-top: 7px solid #2795b6;
+  padding-top: 20px;
+}
+
+section {
+  padding-top: 20px;
+}
+
+footer {
+  height: 50px;
+  padding-top: 20px;
+}
+
+img.github {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
