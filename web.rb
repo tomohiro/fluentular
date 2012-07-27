@@ -43,20 +43,20 @@ __END__
       %img.github(src='http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png' alt='Fork me on GitHub')
 
     %header.row
-      %div.twelve.coumns
+      %section
         %h1
           %a(href='/') Fluentular
-        %p a Fluentd regular expression editor
+        %h4 a Fluentd regular expression editor
 
     %article
       = yield
 
     %footer.row
-      %div.four.columns
+      %section.four.columns
         %p
           &copy; 2012
           %a(href='https://github.com/Tomohiro') Tomohiro, TAIRA
-      %div.four.columns.offset-by-four
+      %section.four.columns.offset-by-four
         %p.right
           Powered by
           %a(href='http://www.sinatrarb.com/') Sinatra
@@ -64,13 +64,13 @@ __END__
           %a(href='http://heroku.com') Heroku
 
 @@ index
-%section.row
-  %form(method='GET' action='/parse')
-    %div.eight.columns
-      %label Regexp
+%div.row
+  %section.eight.columns
+    %form(method='GET' action='/parse')
+      %label Regular Expression
       %textarea(name='regexp' rows=5)= @regexp
 
-      %label Input
+      %label Test String
       %textarea(name='input' rows=5)= @input
 
       %input.radius.button(type='submit' value='Parse')
@@ -89,9 +89,16 @@ __END__
       %code
         ^(?&lt;time&gt;[^ ]* [^ ]* [^ ]*) (?&lt;host&gt;[^ ]*) (?&lt;ident&gt;[a-zA-Z0-9_\/\.\-]*)(?:\[(?&lt;pid&gt;[0-9]+)\])?[^\:]*\: *(?&lt;message&gt;.*)$
 
+%div.row
+  %section.twelve
+    %h4 Format
+    %p Copy and paste for <code>fluent.conf</code>
+    %div.panel
+      %p format /#{@regexp}/
 
-%section.row
-  %section.twelve.columns
+%div.row
+  %section
+    %h4 Match Groups
     %table.twelve
       %thead
         %tr
