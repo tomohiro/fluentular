@@ -33,19 +33,20 @@ __END__
 %html
   %head
     %meta(charset='UTF-8')
-    %title Fluentd Regexp Checker
+    %title Fluentular: a Fluentd regular expression editor
     %link(rel='stylesheet' href='/stylesheets/font-awesome.css')
     %link(rel='stylesheet' href='/stylesheets/foundation.css')
     %link(rel='stylesheet' href='/stylesheets/app.css')
 
   %body
-    %a(href='http://github.com/Tomohiro/fluentd_regexp_checker')
-      %img.github(src='http://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png' alt='Fork me on GitHub')
+    %a(href='http://github.com/Tomohiro/fluentular')
+      %img.github(src='http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png' alt='Fork me on GitHub')
 
     %header.row
       %div.twelve.coumns
         %h1
-          %a(href='/') Fluentd Regexp Checker
+          %a(href='/') Fluentular
+        %p a Fluentd regular expression editor
 
     %article
       = yield
