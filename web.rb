@@ -97,12 +97,12 @@ __END__
           %th.four Key
           %th.eight Value
       %tbody
-      - if @parsed
-        - @parsed.each do |key, value|
+        - if @parsed
+          - @parsed.each do |key, value|
+            %tr
+              %th= key
+              %td= value
+        - else
           %tr
-            %th= key
-            %td= value
-      - else
-        %tr
-          %th 
-          %td 
+            %th 
+            %td 
