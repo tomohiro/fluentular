@@ -1,6 +1,7 @@
 Fluentular
 ================================================================================
 
+[![Dependency Status](https://gemnasium.com/Tomohiro/fluentular.png)](https://gemnasium.com/Tomohiro/fluentular)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Tomohiro/fluentular)
 
 a Fluentd regular expression editor
