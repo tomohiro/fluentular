@@ -88,7 +88,7 @@ __END__
 
   %aside.four.columns
     %div.panel.radius
-      %h4 Regexp sample
+      %h4 Regexp example
       %h5
         %i.icon-check
         Apache
