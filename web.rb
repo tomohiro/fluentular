@@ -79,10 +79,10 @@ __END__
   %section.eight.columns
     %form(method='GET' action='/parse')
       %label Regular Expression
-      %textarea(name='regexp' rows=5)= @regexp
+      %textarea(name='regexp' rows=5)&= @regexp
 
       %label Test String
-      %textarea(name='input' rows=5)= @input
+      %textarea(name='input' rows=5)&= @input
 
       %input.radius.button(type='submit' value='Parse')
 
