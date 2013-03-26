@@ -1,10 +1,10 @@
-Fluentular
+Fluentular [![Stillmaintained](http://stillmaintained.com/Tomohiro/fluentular.png)](http://stillmaintained.com/Tomohiro/fluentular)
 ================================================================================
 
-[![Dependency Status](https://gemnasium.com/Tomohiro/fluentular.png)](https://gemnasium.com/Tomohiro/fluentular)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Tomohiro/fluentular)
-
 a Fluentd regular expression editor
+
+[![Dependency Status](https://gemnasium.com/Tomohiro/fluentular.png)](https://gemnasium.com/Tomohiro/fluentular)
+[![Code Climate](https://codeclimate.com/github/Tomohiro/fluentular.png)](https://codeclimate.com/github/Tomohiro/fluentular)
 
 ---
 
@@ -21,6 +21,6 @@ Inspired
 LICENSE
 --------------------------------------------------------------------------------
 
-&copy; 2012 Tomohiro, TAIRA.
+&copy; 2013 Tomohiro  TAIRA.
 This project is licensed under the MIT license.
 See LICENSE for details.
