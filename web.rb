@@ -65,8 +65,8 @@ __END__
     %footer.row
       %section.four.columns
         %p
-          &copy; 2012
-          %a(href='https://github.com/Tomohiro') Tomohiro, TAIRA
+          &copy; 2013
+          %a(href='https://github.com/Tomohiro') Tomohiro TAIRA
       %section.four.columns.offset-by-four
         %p.right
           Powered by
