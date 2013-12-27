@@ -5,7 +5,7 @@ GEM
       iobuffer (>= 1.0.0)
     daemons (1.1.9)
     eventmachine (1.0.3)
-    fluentd (0.10.41)
+    fluentd (0.10.42)
       cool.io (~> 1.1.1)
       http_parser.rb (~> 0.5.1)
       json (>= 1.4.3)
