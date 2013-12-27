@@ -4,9 +4,6 @@ Fluentular [![Stillmaintained](http://stillmaintained.com/Tomohiro/fluentular.pn
 a Fluentd regular expression editor
 
 [![Dependency Status](https://gemnasium.com/Tomohiro/fluentular.png)](https://gemnasium.com/Tomohiro/fluentular)
-[![Code Climate](https://codeclimate.com/github/Tomohiro/fluentular.png)](https://codeclimate.com/github/Tomohiro/fluentular)
-
----
 
 
 Inspired
@@ -21,6 +18,6 @@ Inspired
 LICENSE
 --------------------------------------------------------------------------------
 
-&copy; 2013 Tomohiro  TAIRA.
+&copy; 2013 Tomohiro TAIRA.
 This project is licensed under the MIT license.
 See LICENSE for details.
