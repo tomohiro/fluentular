@@ -107,19 +107,35 @@ __END__
 
 %div.row
   %section.twelve
-    %h4 Format
+    %h4 Configuration
     %p Copy and paste to <code>fluent.conf</code> or <code>td-agent.conf</code>
     %div.panel
-      %span format /#{@regexp}/
+      & &lt;source&gt;
+      %br/
+      & &nbsp;&nbsp;type tail
+      %br/
+      & &nbsp;&nbsp;path /var/log/foo/bar.log
+      %br/
+      & &nbsp;&nbsp;pos_file /var/log/td-agent/foo-bar.log.pos
+      %br/
+      & &nbsp;&nbsp;tag foo.bar
+      %br/
+      & &nbsp;&nbsp;format /#{@regexp}/
       %br/
       - if @time_format and !@time_format.empty?
-        %span time_format #{@time_format}
+        & &nbsp;&nbsp;time_format #{@time_format}
+        %br/
+      & &lt;/source&gt;
 
 %div.row
   %section
     %h4 Data Inspector
     %h5 Attribute
     %table.twelve
+      %thead
+        %tr
+          %th.four Key
+          %th.eight Value
       %tbody
         - if @parsed
           %tr
