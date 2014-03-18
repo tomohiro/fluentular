@@ -155,8 +155,8 @@ __END__
         - if @parsed
           - @parsed.each do |key, value|
             %tr
-              %th= key
-              %td= value
+              %th #{CGI.escapeHTML(key)}
+              %td #{CGI.escapeHTML(value)}
         - else
           %tr
             %th 
