@@ -15,12 +15,14 @@ end
 get '/parse' do
   @regexp = params[:regexp]
   @input  = params[:input]
+  @time_format = params[:time_format]
 
   begin
     parser = Fluent::TextParser::RegexpParser.new(Regexp.new(@regexp))
-    @parsed = parser.call(@input)[1]
+    parser.time_format = @time_format if not @time_format.empty?
+    @parsed_time, @parsed = parser.call(@input)
   rescue
-    @parsed = nil
+    @parsed_time = @parsed = nil
   end
 
   haml :index
@@ -84,6 +86,9 @@ __END__
       %label Test String
       %textarea(name='input' rows=5)&= @input
 
+      %label Custom Time Format (e.g. %Y-%m-%d %H:%M:%S)
+      %textarea(name='time_format' rows=1)&= @time_format
+
       %input.radius.button(type='submit' value='Parse')
 
   %aside.four.columns
@@ -103,13 +108,28 @@ __END__
 %div.row
   %section.twelve
     %h4 Format
-    %p Copy and paste for <code>fluent.conf</code>
+    %p Copy and paste to <code>fluent.conf</code> or <code>td-agent.conf</code>
     %div.panel
-      %p format /#{@regexp}/
+      %span format /#{@regexp}/
+      %br/
+      - if @time_format and !@time_format.empty?
+        %span time_format #{@time_format}
 
 %div.row
   %section
-    %h4 Match Groups
+    %h4 Data Inspector
+    %h5 Attribute
+    %table.twelve
+      %tbody
+        - if @parsed
+          %tr
+            %th.four time
+            %td.eight #{Time.at(@parsed_time).strftime("%Y/%m/%d %H:%M:%S")}
+        - else
+          %tr
+            %th.four
+            %td.eight
+    %h5 Record
     %table.twelve
       %thead
         %tr
