@@ -19,7 +19,7 @@ get '/parse' do
 
   begin
     parser = Fluent::TextParser::RegexpParser.new(Regexp.new(@regexp))
-    parser.time_format = @time_format if not @time_format.empty?
+    parser.configure('time_format' => @time_format) if not @time_format.empty?
     @parsed_time, @parsed = parser.call(@input)
   rescue
     @parsed_time = @parsed = nil
