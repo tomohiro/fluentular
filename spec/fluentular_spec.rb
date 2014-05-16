@@ -20,14 +20,19 @@ describe 'Fluentular' do
     end
   end
 
-  describe 'GET /parse?input=:input&regexp=:regexp&time_format=:time_format' do
+  describe 'GET /parse' do
+    let(:params) do
+      { input: '', regexp: '', time_format: '' }
+    end
+
     context 'with valid regular expression' do
-      let(:valid_regexp_param) do
-        URI.encode('input=example.com&regexp=(?<host>[^ ]*)&time_format=')
+      before do
+        params[:input]  = 'example.com'
+        params[:regexp] = '(?<host>[^ ]*)'
       end
 
       it 'returns parsed records' do
-        get '/parse?' + valid_regexp_param do
+        get '/parse', params do
           expect(last_response).to be_ok
           expect(last_response).to match '<th>host</th>\n.+<td>example.com</td>'
         end
@@ -35,12 +40,12 @@ describe 'Fluentular' do
     end
 
     context 'with empty regular expression' do
-      let(:empty_regexp_param) do
-        URI.encode('input=example.com&regexp=&time_format=')
+      before do
+        params[:input] = 'example.com'
       end
 
       it 'returns no records' do
-        get '/parse?' + empty_regexp_param do
+        get '/parse', params do
           expect(last_response).to be_ok
           expect(last_response).not_to match '<th>host</th>\n.+<td>example.com</td>'
         end
