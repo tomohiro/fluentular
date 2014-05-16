@@ -4,6 +4,7 @@ Fluentular [![Stillmaintained](http://stillmaintained.com/Tomohiro/fluentular.pn
 a Fluentd regular expression editor
 
 [![Dependency Status](https://gemnasium.com/Tomohiro/fluentular.png)](https://gemnasium.com/Tomohiro/fluentular)
+[![Build Status](https://travis-ci.org/Tomohiro/fluentular.svg?branch=master)](https://travis-ci.org/Tomohiro/fluentular)
 
 
 Inspired
@@ -18,6 +19,6 @@ Inspired
 LICENSE
 --------------------------------------------------------------------------------
 
-&copy; 2013 Tomohiro TAIRA.
+&copy; 2012 - 2014 Tomohiro TAIRA.
 This project is licensed under the MIT license.
 See LICENSE for details.
