@@ -1,4 +1,4 @@
-$: << './'
+$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__)))
 
-require 'web'
+require 'app'
 run Sinatra::Application
