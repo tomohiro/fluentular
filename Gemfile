@@ -6,6 +6,8 @@ gem 'thin'
 gem 'haml'
 gem 'fluentd'
 
-group :development do
+group :test, :development do
   gem 'shotgun'
+  gem 'rack-test'
+  gem 'rspec'
 end
