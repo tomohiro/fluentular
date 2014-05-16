@@ -1,11 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    cool.io (1.2.3)
+    cool.io (1.2.4)
     daemons (1.1.9)
     diff-lcs (1.2.5)
     eventmachine (1.0.3)
-    fluentd (0.10.46)
+    fluentd (0.10.47)
       cool.io (>= 1.1.1, < 2.0.0, != 1.2.0)
       http_parser.rb (>= 0.5.1, < 0.7.0)
       json (>= 1.4.3)
