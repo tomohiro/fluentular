@@ -35,10 +35,10 @@ __END__
 %html
   %head
     %meta(charset='UTF-8')
+    %meta(name='viewport' content='width=device-width, initial-scale=1.0')
     %title Fluentular: a Fluentd regular expression editor
-    %link(rel='stylesheet' href='/stylesheets/font-awesome.css')
-    %link(rel='stylesheet' href='/stylesheets/foundation.css')
-    %link(rel='stylesheet' href='/stylesheets/app.css')
+    %link(rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+    %link(rel='stylesheet' href='//cdn.foundation5.zurb.com/foundation.css')
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', "#{ENV['UA_CODE']}"]);
@@ -49,13 +49,26 @@ __END__
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
-
+    :css
+      @import url(http://fonts.googleapis.com/css?family=Squada+One);
+      body {
+        border-top: 7px solid #2795b6;
+        padding-top: 10px;
+      }
+      h1 {
+        font-family: 'Squada One', cursive, sans-serif;
+      }
+      img.github {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0;
+      }
   %body
     %a(href='http://github.com/Tomohiro/fluentular')
       %img.github(src='http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png' alt='Fork me on GitHub')
 
-    %header.row
+    %header.row.small-centered.columns
       %section
         %h1
           %a(href='/') Fluentular
@@ -64,13 +77,13 @@ __END__
     %article
       = yield
 
-    %footer.row
-      %section.four.columns
+    %footer.row.small-centered.columns
+      %section.small-12.medium-4.columns
         %p
-          &copy; 2013
+          &copy; 2012 - 2014
           %a(href='https://github.com/Tomohiro') Tomohiro TAIRA
-      %section.four.columns.offset-by-four
-        %p.right
+      %section.small-12.medium-4.columns.medium-offset-4
+        %p
           Powered by
           %a(href='http://www.sinatrarb.com/') Sinatra
           Hosted on
@@ -78,7 +91,7 @@ __END__
 
 @@ index
 %div.row
-  %section.eight.columns
+  %section.small-12.medium-8.columns
     %form(method='GET' action='/parse')
       %label Regular Expression
       %textarea(name='regexp' rows=5)&= @regexp
@@ -91,22 +104,22 @@ __END__
 
       %input.radius.button(type='submit' value='Parse')
 
-  %aside.four.columns
-    %div.panel.radius
+  %aside.small-12.medium-4.columns
+    %div.panel.callout.radius
       %h4 Regexp example
       %h5
-        %i.icon-check
+        %i.fa.fa-check-square-o
         Apache
       %code
         ^(?&lt;host&gt;[^ ]*) [^ ]* (?&lt;user&gt;[^ ]*) \[(?&lt;time&gt;[^\]]*)\] "(?&lt;method&gt;\S+)(?: +(?&lt;path&gt;[^ ]*) +\S*)?" (?&lt;code&gt;[^ ]*) (?&lt;size&gt;[^ ]*)(?: "(?&lt;referer&gt;[^\"]*)" "(?&lt;agent&gt;[^\"]*)")?$
       %h5
-        %i.icon-check
+        %i.fa.fa-check-square-o
         Syslog
       %code
         ^(?&lt;time&gt;[^ ]* [^ ]* [^ ]*) (?&lt;host&gt;[^ ]*) (?&lt;ident&gt;[a-zA-Z0-9_\/\.\-]*)(?:\[(?&lt;pid&gt;[0-9]+)\])?[^\:]*\: *(?&lt;message&gt;.*)$
 
 %div.row
-  %section.twelve
+  %section.small-12.small-centered.columns
     %h4 Configuration
     %p Copy and paste to <code>fluent.conf</code> or <code>td-agent.conf</code>
     %div.panel
@@ -128,29 +141,29 @@ __END__
       & &lt;/source&gt;
 
 %div.row
-  %section
+  %section.small-12.small-centered.columns
     %h4 Data Inspector
     %h5 Attribute
-    %table.twelve
+    %table.small-12
       %thead
         %tr
-          %th.four Key
-          %th.eight Value
+          %th.small-4 Key
+          %th.small-8 Value
       %tbody
         - if @parsed
           %tr
-            %th.four time
-            %td.eight #{Time.at(@parsed_time).strftime("%Y/%m/%d %H:%M:%S")}
+            %th.small-4 time
+            %td.small-8 #{Time.at(@parsed_time).strftime("%Y/%m/%d %H:%M:%S")}
         - else
           %tr
-            %th.four
-            %td.eight
+            %th.small-4
+            %td.small-12
     %h5 Record
-    %table.twelve
+    %table.small-12
       %thead
         %tr
-          %th.four Key
-          %th.eight Value
+          %th.small-4 Key
+          %th.small-8 Value
       %tbody
         - if @parsed
           - @parsed.each do |key, value|
@@ -159,5 +172,5 @@ __END__
               %td&= value
         - else
           %tr
-            %th 
-            %td 
+            %th
+            %td
