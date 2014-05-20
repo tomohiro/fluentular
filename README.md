@@ -6,6 +6,10 @@ a Fluentd regular expression editor
 [![Dependency Status](https://gemnasium.com/Tomohiro/fluentular.png)](https://gemnasium.com/Tomohiro/fluentular)
 [![Build Status](https://travis-ci.org/Tomohiro/fluentular.svg?branch=master)](https://travis-ci.org/Tomohiro/fluentular)
 
+### Screenshot
+
+![browser](https://cloud.githubusercontent.com/assets/54254/3028219/1de8b8b0-e02a-11e3-99c7-8a833ec0de41.png)
+
 
 Inspired
 -------------------------------------------------------------------------------
