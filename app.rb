@@ -13,15 +13,17 @@ get '/' do
 end
 
 get '/parse' do
-  @regexp = params[:regexp].gsub(/^\/(.+)\/$/, '\1')
-  @input  = params[:input]
+  @regexp      = params[:regexp].gsub(/^\/(.+)\/$/, '\1')
+  @input       = params[:input]
   @time_format = params[:time_format]
+  @error       = nil
 
   begin
     parser = Fluent::TextParser::RegexpParser.new(Regexp.new(@regexp))
     parser.configure('time_format' => @time_format) if not @time_format.empty?
     @parsed_time, @parsed = parser.call(@input)
-  rescue
+  rescue RegexpError => e
+    @error = e
     @parsed_time = @parsed = nil
   end
 
@@ -102,7 +104,13 @@ __END__
       %label Custom Time Format (e.g. %Y-%m-%d %H:%M:%S)
       %textarea(name='time_format' rows=1)&= @time_format
 
+      - if @error
+        %label Regular Expression has a syntax error: Please check
+        %span.alert-box.alert.radius
+          = @error
+
       %input.radius.button(type='submit' value='Parse')
+
 
   %aside.small-12.medium-4.columns
     %div.panel.callout.radius

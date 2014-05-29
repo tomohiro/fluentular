@@ -51,5 +51,18 @@ describe 'Fluentular' do
         end
       end
     end
+
+    context 'with invalid regular expression' do
+      before do
+        params[:input]  = 'example.com'
+        params[:regexp] = '(?<host>[^]*' # Unmatched parenthesis
+      end
+
+      it 'returns error message' do
+        get '/parse', params do
+          expect(last_response).to match 'Regular Expression has a syntax error'
+        end
+      end
+    end
   end
 end
