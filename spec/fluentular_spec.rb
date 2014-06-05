@@ -39,6 +39,22 @@ describe 'Fluentular' do
       end
     end
 
+    context 'with parsing valid time format' do
+      before do
+        params[:input]  = '25/Nov/2013:18:09:45 +0900 example.com'
+        params[:regexp] = '(?<time>[^ ]* [^ ]*) (?<host>[^ ]*)'
+        params[:time_format] = '%d/%b/%Y:%H:%M:%S %z'
+      end
+
+      it 'returns parsed time' do
+        get '/parse', params do
+          expect(last_response).to be_ok
+          expect(last_response).to match '<th>host</th>\n.+<td>example.com</td>'
+          expect(last_response).to match '<th[^>]*>time</th>\n.+<td[^>]*>2013/11/25 18:09:45</td>'
+        end
+      end
+    end
+
     context 'with empty regular expression' do
       before do
         params[:input] = 'example.com'
@@ -67,7 +83,7 @@ describe 'Fluentular' do
 
     context 'with invalid time format' do
       before do
-        params[:input]  = '2014/06/05 13:55:04 example.com'
+        params[:input]  = '25/Nov/2013:18:09:45 +0900 example.com'
         params[:regexp] = '(?<time>[^ ]* [^ ]*) (?<host>[^ ]*)'
         params[:time_format] = '%a' # Unmatched strptime format
       end
