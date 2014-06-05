@@ -95,18 +95,26 @@ __END__
 %div.row
   %section.small-12.medium-8.columns
     %form(method='GET' action='/parse')
-      %label Regular Expression
+      %label
+        %i.fa.fa-asterisk
+        Regular Expression
       %textarea(name='regexp' rows=5)&= @regexp
 
-      %label Test String
+      %label
+        %i.fa.fa-gavel
+        Test String
       %textarea(name='input' rows=5)&= @input
 
-      %label Custom Time Format (e.g. %Y-%m-%d %H:%M:%S)
+      %label
+        %i.fa.fa-clock-o
+        Custom Time Format (see also ruby document;
+        %a(href='http://docs.ruby-lang.org/en/2.1.0/Time.html#method-i-strptime') strptime)
       %textarea(name='time_format' rows=1)&= @time_format
 
       - if @error
-        %label Regular Expression has a syntax error: Please check
         %span.alert-box.alert.radius
+          %i.fa.fa-exclamation-triangle
+          Error:
           = @error
 
       %input.radius.button(type='submit' value='Parse')
