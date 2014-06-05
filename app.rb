@@ -115,7 +115,7 @@ __END__
         %span.alert-box.alert.radius
           %i.fa.fa-exclamation-triangle
           Error:
-          = @error
+          &= @error
 
       %input.radius.button(type='submit' value='Parse')
 
