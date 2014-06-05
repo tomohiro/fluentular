@@ -60,7 +60,21 @@ describe 'Fluentular' do
 
       it 'returns error message' do
         get '/parse', params do
-          expect(last_response).to match 'Regular Expression has a syntax error'
+          expect(last_response).to match 'empty char-class'
+        end
+      end
+    end
+
+    context 'with invalid time format' do
+      before do
+        params[:input]  = '2014/06/05 13:55:04 example.com'
+        params[:regexp] = '(?<time>[^ ]* [^ ]*) (?<host>[^ ]*)'
+        params[:time_format] = '%a' # Unmatched strptime format
+      end
+
+      it 'returns error message' do
+        get '/parse', params do
+          expect(last_response).to match 'invalid strptime format'
         end
       end
     end

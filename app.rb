@@ -22,7 +22,7 @@ get '/parse' do
     parser = Fluent::TextParser::RegexpParser.new(Regexp.new(@regexp))
     parser.configure('time_format' => @time_format) if not @time_format.empty?
     @parsed_time, @parsed = parser.call(@input)
-  rescue RegexpError => e
+  rescue ArgumentError, RegexpError => e
     @error = e
     @parsed_time = @parsed = nil
   end
@@ -95,36 +95,56 @@ __END__
 %div.row
   %section.small-12.medium-8.columns
     %form(method='GET' action='/parse')
-      %label Regular Expression
+      %label
+        %i.fa.fa-asterisk
+        Regular Expression
       %textarea(name='regexp' rows=5)&= @regexp
 
-      %label Test String
+      %label
+        %i.fa.fa-gavel
+        Test String
       %textarea(name='input' rows=5)&= @input
 
-      %label Custom Time Format (e.g. %Y-%m-%d %H:%M:%S)
+      %label
+        %i.fa.fa-clock-o
+        Custom Time Format (see also ruby document;
+        %a(href='http://docs.ruby-lang.org/en/2.1.0/Time.html#method-i-strptime') strptime)
       %textarea(name='time_format' rows=1)&= @time_format
 
       - if @error
-        %label Regular Expression has a syntax error: Please check
         %span.alert-box.alert.radius
-          = @error
+          %i.fa.fa-exclamation-triangle
+          Error:
+          &= @error
 
       %input.radius.button(type='submit' value='Parse')
 
 
   %aside.small-12.medium-4.columns
     %div.panel.callout.radius
-      %h4 Regexp example
+      %h4 Examples
       %h5
         %i.fa.fa-check-square-o
         Apache
+      %h6
+        Regular expression:
       %code
-        ^(?&lt;host&gt;[^ ]*) [^ ]* (?&lt;user&gt;[^ ]*) \[(?&lt;time&gt;[^\]]*)\] "(?&lt;method&gt;\S+)(?: +(?&lt;path&gt;[^ ]*) +\S*)?" (?&lt;code&gt;[^ ]*) (?&lt;size&gt;[^ ]*)(?: "(?&lt;referer&gt;[^\"]*)" "(?&lt;agent&gt;[^\"]*)")?$
+        & ^(?&lt;host&gt;[^ ]*) [^ ]* (?&lt;user&gt;[^ ]*) \[(?&lt;time&gt;[^\]]*)\] "(?&lt;method&gt;\S+)(?: +(?&lt;path&gt;[^ ]*) +\S*)?" (?&lt;code&gt;[^ ]*) (?&lt;size&gt;[^ ]*)(?: "(?&lt;referer&gt;[^\"]*)" "(?&lt;agent&gt;[^\"]*)")?$
+      %h6
+        Time Format:
+      %code
+        & %d/%b/%Y:%H:%M:%S %z
       %h5
         %i.fa.fa-check-square-o
         Syslog
+      %h6
+        Regular expression:
       %code
-        ^(?&lt;time&gt;[^ ]* [^ ]* [^ ]*) (?&lt;host&gt;[^ ]*) (?&lt;ident&gt;[a-zA-Z0-9_\/\.\-]*)(?:\[(?&lt;pid&gt;[0-9]+)\])?[^\:]*\: *(?&lt;message&gt;.*)$
+        & ^(?&lt;time&gt;[^ ]* [^ ]* [^ ]*) (?&lt;host&gt;[^ ]*) (?&lt;ident&gt;[a-zA-Z0-9_\/\.\-]*)(?:\[(?&lt;pid&gt;[0-9]+)\])?[^\:]*\: *(?&lt;message&gt;.*)$
+      %h6
+        Time Format:
+      %code
+        & %b %d %H:%M:%S
 
 %div.row
   %section.small-12.small-centered.columns
