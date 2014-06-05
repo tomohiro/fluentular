@@ -40,17 +40,19 @@ describe 'Fluentular' do
     end
 
     context 'with parsing valid time format' do
+      time_format = '%d/%b/%Y:%H:%M:%S %z'
       before do
         params[:input]  = '25/Nov/2013:18:09:45 +0900 example.com'
         params[:regexp] = '(?<time>[^ ]* [^ ]*) (?<host>[^ ]*)'
-        params[:time_format] = '%d/%b/%Y:%H:%M:%S %z'
+        params[:time_format] = time_format
       end
 
       it 'returns parsed time' do
         get '/parse', params do
+          expect_timestamp = Time.strptime('25/Nov/2013:18:09:45 +0900', time_format).strftime("%Y/%m/%d %H:%M:%S %z")
           expect(last_response).to be_ok
           expect(last_response).to match '<th>host</th>\n.+<td>example.com</td>'
-          expect(last_response).to match '<th[^>]*>time</th>\n.+<td[^>]*>2013/11/25 18:09:45</td>'
+          expect(last_response).to match '<th[^>]*>time</th>\n.+<td[^>]*>' + Regexp.escape(expect_timestamp) + '</td>'
         end
       end
     end
