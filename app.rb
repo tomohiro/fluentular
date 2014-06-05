@@ -181,7 +181,7 @@ __END__
         - if @parsed
           %tr
             %th.small-4 time
-            %td.small-8 #{Time.at(@parsed_time).strftime("%Y/%m/%d %H:%M:%S")}
+            %td.small-8 #{Time.at(@parsed_time).strftime("%Y/%m/%d %H:%M:%S %z")}
         - else
           %tr
             %th.small-4
