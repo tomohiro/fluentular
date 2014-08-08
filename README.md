@@ -1,4 +1,4 @@
-Fluentular [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+Fluentular
 ================================================================================
 
 a Fluentd regular expression editor
@@ -6,6 +6,12 @@ a Fluentd regular expression editor
 [![Stillmaintained](http://stillmaintained.com/Tomohiro/fluentular.png)](http://stillmaintained.com/Tomohiro/fluentular)
 [![Dependency Status](https://gemnasium.com/Tomohiro/fluentular.png)](https://gemnasium.com/Tomohiro/fluentular)
 [![Build Status](https://travis-ci.org/Tomohiro/fluentular.svg?branch=master)](https://travis-ci.org/Tomohiro/fluentular)
+
+
+### Heroku Ready
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 
 ### Screenshot
 
