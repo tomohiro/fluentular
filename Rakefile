@@ -20,4 +20,5 @@ task :update do
   sh 'git add .'
   sh 'git commit -m "Update bundle gems"'
   sh "git push https://#{token}:x-oauth-basic@github.com/Tomohiro/fluentular update-bundles"
+  sh "curl https://#{token}:x-oauth-basic@api.github.com/repos/Tomohiro/fluentular/pulls -X POST -d 'title=Update bundle gems' -d 'base=master' -d 'head=Tomohiro:update-bundles'"
 end
