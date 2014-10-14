@@ -33,6 +33,7 @@ GEM
       rspec-support (~> 3.1.0)
     rspec-mocks (3.1.2)
       rspec-support (~> 3.1.0)
+    rspec-request_describer (0.0.3)
     rspec-support (3.1.1)
     shotgun (0.9)
       rack (>= 1.0)
@@ -56,6 +57,7 @@ DEPENDENCIES
   haml
   rack-test
   rspec
+  rspec-request_describer
   shotgun
   sinatra
   thin

@@ -4,9 +4,11 @@ $LOAD_PATH.unshift(File.expand_path('../', File.dirname(__FILE__)))
 require 'app'
 require 'rspec'
 require 'rack/test'
+require 'rspec/request_describer'
 
 describe 'Fluentular' do
   include Rack::Test::Methods
+  include RSpec::RequestDescriber
 
   let(:app) do
     Sinatra::Application
@@ -14,9 +16,8 @@ describe 'Fluentular' do
 
   describe 'GET /' do
     it 'returns an index' do
-      get '/'
-      expect(last_response).to be_ok
-      expect(last_response.body).to match 'Fluentular'
+      should be_ok
+      should match 'Fluentular'
     end
   end
 
@@ -32,10 +33,8 @@ describe 'Fluentular' do
       end
 
       it 'returns parsed records' do
-        get '/parse', params do
-          expect(last_response).to be_ok
-          expect(last_response).to match '<th>host</th>\n.+<td>example.com</td>'
-        end
+        should be_ok
+        should match '<th>host</th>\n.+<td>example.com</td>'
       end
     end
 
@@ -48,12 +47,10 @@ describe 'Fluentular' do
       end
 
       it 'returns parsed time' do
-        get '/parse', params do
-          expect_timestamp = Time.strptime('25/Nov/2013:18:09:45 +0900', time_format).strftime("%Y/%m/%d %H:%M:%S %z")
-          expect(last_response).to be_ok
-          expect(last_response).to match '<th>host</th>\n.+<td>example.com</td>'
-          expect(last_response).to match '<th[^>]*>time</th>\n.+<td[^>]*>' + Regexp.escape(expect_timestamp) + '</td>'
-        end
+        expect_timestamp = Time.strptime('25/Nov/2013:18:09:45 +0900', time_format).strftime("%Y/%m/%d %H:%M:%S %z")
+        should be_ok
+        should match '<th>host</th>\n.+<td>example.com</td>'
+        should match '<th[^>]*>time</th>\n.+<td[^>]*>' + Regexp.escape(expect_timestamp) + '</td>'
       end
     end
 
@@ -63,10 +60,8 @@ describe 'Fluentular' do
       end
 
       it 'returns no records' do
-        get '/parse', params do
-          expect(last_response).to be_ok
-          expect(last_response).not_to match '<th>host</th>\n.+<td>example.com</td>'
-        end
+        should be_ok
+        should match '<th>host</th>\n.+<td>example.com</td>'
       end
     end
 
@@ -77,9 +72,7 @@ describe 'Fluentular' do
       end
 
       it 'returns error message' do
-        get '/parse', params do
-          expect(last_response).to match 'empty char-class'
-        end
+        should match 'empty char-class'
       end
     end
 
@@ -91,9 +84,7 @@ describe 'Fluentular' do
       end
 
       it 'returns error message' do
-        get '/parse', params do
-          expect(last_response).to match 'invalid strptime format'
-        end
+        should match 'invalid strptime format'
       end
     end
   end
