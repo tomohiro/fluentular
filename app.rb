@@ -40,7 +40,7 @@ __END__
     %meta(name='viewport' content='width=device-width, initial-scale=1.0')
     %title Fluentular: a Fluentd regular expression editor
     %link(rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
-    %link(rel='stylesheet' href='//cdn.foundation5.zurb.com/foundation.css')
+    %link(rel='stylesheet' href='//cdn.jsdelivr.net/foundation/5.4.7/css/foundation.min.css')
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', "#{ENV['UA_CODE']}"]);
