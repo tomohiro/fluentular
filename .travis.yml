@@ -1,5 +1,7 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.1.5
+  - 2.2.0
+before_install:
+  - export TZ=Asia/Tokyo
 script: bundle exec rspec
