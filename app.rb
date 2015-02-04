@@ -60,6 +60,16 @@ __END__
       h1 {
         font-family: 'Squada One', cursive, sans-serif;
       }
+      pre#code-example {
+        padding: 0.125rem 0.3125rem 0.0625rem;
+        background-color: #f8f8f8;
+        border: 1px solid #dfdfdf;
+        white-space: pre-wrap;
+      }
+      code {
+        padding: 0px;
+        border: none;
+      }
       img.github {
         position: absolute;
         top: 0;
@@ -127,29 +137,17 @@ __END__
 
   %aside.small-12.medium-4.columns
     %div.panel.callout.radius
-      %h4 Examples
-      %h5
-        %i.fa.fa-check-square-o
-        Apache
+      %h4 Example (Apache)
       %h6
         Regular expression:
-      %code
-        & ^(?&lt;host&gt;[^ ]*) [^ ]* (?&lt;user&gt;[^ ]*) \[(?&lt;time&gt;[^\]]*)\] "(?&lt;method&gt;\S+)(?: +(?&lt;path&gt;[^ ]*) +\S*)?" (?&lt;code&gt;[^ ]*) (?&lt;size&gt;[^ ]*)(?: "(?&lt;referer&gt;[^\"]*)" "(?&lt;agent&gt;[^\"]*)")?$
+      %pre#code-example
+        %code
+          & ^(?&lt;host&gt;[^ ]*) [^ ]* (?&lt;user&gt;[^ ]*) \[(?&lt;time&gt;[^\]]*)\] "(?&lt;method&gt;\S+)(?: +(?&lt;path&gt;[^ ]*) +\S*)?" (?&lt;code&gt;[^ ]*) (?&lt;size&gt;[^ ]*)(?: "(?&lt;referer&gt;[^\"]*)" "(?&lt;agent&gt;[^\"]*)")?$
       %h6
         Time Format:
-      %code
-        & %d/%b/%Y:%H:%M:%S %z
-      %h5
-        %i.fa.fa-check-square-o
-        Syslog
-      %h6
-        Regular expression:
-      %code
-        & ^(?&lt;time&gt;[^ ]* [^ ]* [^ ]*) (?&lt;host&gt;[^ ]*) (?&lt;ident&gt;[a-zA-Z0-9_\/\.\-]*)(?:\[(?&lt;pid&gt;[0-9]+)\])?[^\:]*\: *(?&lt;message&gt;.*)$
-      %h6
-        Time Format:
-      %code
-        & %b %d %H:%M:%S
+      %pre#code-example
+        %code
+          & %d/%b/%Y:%H:%M:%S %z
 
 %div.row
   %section.small-12.small-centered.columns
