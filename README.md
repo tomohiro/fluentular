@@ -30,6 +30,6 @@ Inspired
 LICENSE
 --------------------------------------------------------------------------------
 
-&copy; 2012 - 2014 Tomohiro TAIRA.
+&copy; 2012 - 2015 Tomohiro TAIRA.
 This project is licensed under the MIT license.
 See LICENSE for details.

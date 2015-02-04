@@ -66,6 +66,9 @@ __END__
         right: 0;
         border: 0;
       }
+      i.fa-heart {
+        color: #ff79c6;
+      }
   %body
     %a(href='http://github.com/Tomohiro/fluentular')
       %img.github(src='http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png' alt='Fork me on GitHub')
@@ -80,11 +83,13 @@ __END__
       = yield
 
     %footer.row.small-centered.columns
-      %section.small-12.medium-4.columns
+      %section.small-12.medium-5.columns
         %p
-          &copy; 2012 - 2014
+          &copy; 2012 - 2015 Made with
+          %i.fa.fa-heart
+          by
           %a(href='https://github.com/Tomohiro') Tomohiro TAIRA
-      %section.small-12.medium-4.columns.medium-offset-4
+      %section.small-12.medium-4.columns.medium-offset-3
         %p
           Powered by
           %a(href='http://www.sinatrarb.com/') Sinatra
