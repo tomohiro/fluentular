@@ -1,6 +1,7 @@
 # enoding: utf-8
 
 require 'sinatra'
+require 'fluent/version'
 require 'fluent/log'
 require 'fluent/config'
 require 'fluent/engine'
@@ -87,6 +88,7 @@ __END__
       %section
         %h1
           %a(href='/') Fluentular
+          %img(src='https://img.shields.io/badge/fluentd-v#{Fluent::VERSION}-orange.svg?style=flat-square')
         %h4 a Fluentd regular expression editor
 
     %article
