@@ -15,7 +15,7 @@ a Fluentd regular expression editor
 
 ### Screenshot
 
-![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/6042066/37d72302-acc5-11e4-8909-f85ad4a71aa9.png)
+![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/6042669/0e32d780-acca-11e4-84e9-5d433d549669.png)
 
 
 Inspired
