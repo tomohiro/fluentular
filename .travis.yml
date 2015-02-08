@@ -5,7 +5,3 @@ rvm:
 before_install:
   - export TZ=Asia/Tokyo
 script: bundle exec rspec
-deploy:
-  provider: heroku
-  api_key:
-    secure: bZWzrBZXsrssXt/IU0uvAzMVKgbPr+BXVO70rTqN5N19B1utVQUF8+iBfsAHA/Y8dtA2NeZgjTshfGYbsoiqZYrPsADUDsRTHFJmnNlfTdoREOCFolEP/Iq++svAGwkkqgi2amlGd6AvQXnFVFFGaJjKa27tkpWOjMWGUwaiqtA=
