@@ -7,7 +7,7 @@ require 'fluent/config'
 require 'fluent/engine'
 require 'fluent/parser'
 
-set :haml, :format => :html5
+set :haml, format: :html5
 
 get '/' do
   haml :index
@@ -41,7 +41,9 @@ __END__
     %meta(name='viewport' content='width=device-width, initial-scale=1.0')
     %title Fluentular: a Fluentd regular expression editor
     %link(rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
-    %link(rel='stylesheet' href='//cdn.jsdelivr.net/foundation/5.4.7/css/foundation.min.css')
+    %link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/normalize.min.css')
+    %link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css')
+    %script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', "#{ENV['UA_CODE']}"]);
@@ -60,6 +62,10 @@ __END__
       }
       h1 {
         font-family: 'Squada One', cursive, sans-serif;
+      }
+      h3 {
+        margin: 40px 0px 20px;
+        border-bottom: 1px solid #eee;
       }
       pre#code-example {
         padding: 0.125rem 0.3125rem 0.0625rem;
@@ -113,12 +119,12 @@ __END__
   %section.small-12.medium-8.columns
     %form(method='GET' action='/parse')
       %label
-        %i.fa.fa-asterisk
+        %i.fa.fa-code
         Regular Expression
       %textarea(name='regexp' rows=5)&= @regexp
 
       %label
-        %i.fa.fa-gavel
+        %i.fa.fa-quote-left
         Test String
       %textarea(name='input' rows=5)&= @input
 
@@ -134,7 +140,9 @@ __END__
           Error:
           &= @error
 
-      %input.radius.button(type='submit' value='Parse')
+      %div.row
+        %div.large-2.large-centered.columns
+          %input.radius.button(type='submit' value='Parse')
 
 
   %aside.small-12.medium-4.columns
@@ -153,7 +161,9 @@ __END__
 
 %div.row
   %section.small-12.small-centered.columns
-    %h4 Configuration
+    %h3
+      %i.fa.fa-file-code-o
+      Configuration
     %p Copy and paste to <code>fluent.conf</code> or <code>td-agent.conf</code>
     %div.panel
       & &lt;source&gt;
@@ -175,8 +185,10 @@ __END__
 
 %div.row
   %section.small-12.small-centered.columns
-    %h4 Data Inspector
-    %h5 Attribute
+    %h3
+      %i.fa.fa-crosshairs
+      Data Inspector
+    %h4 Attributes
     %table.small-12
       %thead
         %tr
@@ -191,7 +203,7 @@ __END__
           %tr
             %th.small-4
             %td.small-12
-    %h5 Record
+    %h4 Records
     %table.small-12
       %thead
         %tr
