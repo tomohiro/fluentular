@@ -7,7 +7,7 @@ require 'fluent/config'
 require 'fluent/engine'
 require 'fluent/parser'
 
-set :haml, :format => :html5
+set :haml, format: :html5
 
 get '/' do
   haml :index
