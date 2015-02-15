@@ -63,6 +63,10 @@ __END__
       h1 {
         font-family: 'Squada One', cursive, sans-serif;
       }
+      h3 {
+        margin: 40px 0px 20px;
+        border-bottom: 1px solid #eee;
+      }
       pre#code-example {
         padding: 0.125rem 0.3125rem 0.0625rem;
         background-color: #f8f8f8;
@@ -115,12 +119,12 @@ __END__
   %section.small-12.medium-8.columns
     %form(method='GET' action='/parse')
       %label
-        %i.fa.fa-asterisk
+        %i.fa.fa-code
         Regular Expression
       %textarea(name='regexp' rows=5)&= @regexp
 
       %label
-        %i.fa.fa-gavel
+        %i.fa.fa-quote-left
         Test String
       %textarea(name='input' rows=5)&= @input
 
@@ -136,7 +140,9 @@ __END__
           Error:
           &= @error
 
-      %input.radius.button(type='submit' value='Parse')
+      %div.row
+        %div.large-2.large-centered.columns
+          %input.radius.button(type='submit' value='Parse')
 
 
   %aside.small-12.medium-4.columns
@@ -155,7 +161,9 @@ __END__
 
 %div.row
   %section.small-12.small-centered.columns
-    %h4 Configuration
+    %h3
+      %i.fa.fa-file-code-o
+      Configuration
     %p Copy and paste to <code>fluent.conf</code> or <code>td-agent.conf</code>
     %div.panel
       & &lt;source&gt;
@@ -177,8 +185,10 @@ __END__
 
 %div.row
   %section.small-12.small-centered.columns
-    %h4 Data Inspector
-    %h5 Attribute
+    %h3
+      %i.fa.fa-crosshairs
+      Data Inspector
+    %h4 Attributes
     %table.small-12
       %thead
         %tr
@@ -193,7 +203,7 @@ __END__
           %tr
             %th.small-4
             %td.small-12
-    %h5 Record
+    %h4 Records
     %table.small-12
       %thead
         %tr
