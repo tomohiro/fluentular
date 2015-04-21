@@ -50,7 +50,7 @@ GEM
     tilt (2.0.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2015.2)
+    tzinfo-data (1.2015.3)
       tzinfo (>= 1.0.0)
     yajl-ruby (1.2.1)
 
