@@ -18,7 +18,7 @@ GEM
     http_parser.rb (0.6.0)
     json (1.8.2)
     msgpack (0.5.11)
-    puma (2.11.2)
+    puma (2.11.3)
       rack (>= 1.1, < 2.0)
     rack (1.6.1)
     rack-protection (1.5.3)
