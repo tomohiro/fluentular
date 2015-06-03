@@ -21,7 +21,11 @@ get '/parse' do
 
   begin
     parser = Fluent::TextParser::RegexpParser.new(Regexp.new(@regexp))
-    parser.configure('time_format' => @time_format) if not @time_format.empty?
+    unless @time_format.empty?
+      parser.configure(
+        Fluent::Config::Element.new('', '', { 'time_format' => @time_format }, [])
+      )
+    end
     @parsed_time, @parsed = parser.call(@input)
   rescue Fluent::TextParser::ParserError, RegexpError => e
     @error = e
