@@ -65,3 +65,6 @@ DEPENDENCIES
   rspec
   shotgun
   sinatra
+
+BUNDLED WITH
+   1.10.5
