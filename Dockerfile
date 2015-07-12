@@ -1,12 +1,6 @@
-FROM ruby:2.2.2
+FROM        ruby:2.2-onbuild
+MAINTAINER  Tomohiro TAIRA <tomohiro.t@gmail.com>
 
-RUN gem install foreman
-
-RUN mkdir /app
-ADD Gemfile /app/Gemfile
-
-WORKDIR /app
-RUN bundle install
-ADD . /app
-
-CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "-p", "3000"]
+EXPOSE      3000
+ENTRYPOINT  ["bundle", "exec", "rackup"]
+CMD         ["--host", "0.0.0.0", "-p", "3000"]
