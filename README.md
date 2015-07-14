@@ -15,7 +15,7 @@ a Fluentd regular expression editor
 
 ### Docker Support
 
-You can download and run fluentular container from DockerHub:
+You can download and run fluentular container from [DockerHub](https://registry.hub.docker.com/u/tomohiro/fluentular/):
 
 ```
 $ docker pull tomohiro/fluentular
