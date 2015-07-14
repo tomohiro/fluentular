@@ -19,7 +19,7 @@ You can download and run fluentular container from DockerHub:
 
 ```
 $ docker pull tomohiro/fluentular
-$ docker run -d --rm -p 3000:3000 tomohiro/fluentular
+$ docker run -d -p 3000:3000 tomohiro/fluentular
 ```
 
 
