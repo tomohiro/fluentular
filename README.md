@@ -13,6 +13,16 @@ a Fluentd regular expression editor
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 
+### Docker Support
+
+You can download and run flunetular container from DockerHub:
+
+```
+$ docker pull tomohiro/fluentular
+$ docker run -d --rm -p 3000:3000 tomohiro/fluentular
+```
+
+
 ### Screenshot
 
 ![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/6202037/ed7a9662-b512-11e4-93a5-3640aaf900a5.png)
