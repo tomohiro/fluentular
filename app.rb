@@ -92,7 +92,7 @@ __END__
         color: #ff79c6;
       }
   %body
-    %a(href='http://github.com/Tomohiro/fluentular')
+    %a(href='https://github.com/Tomohiro/fluentular')
       %img.github(src='http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png' alt='Fork me on GitHub')
 
     %header.row.small-centered.columns
@@ -136,7 +136,7 @@ __END__
       %label
         %i.fa.fa-clock-o
         Custom Time Format (see also ruby document;
-        %a(href='http://docs.ruby-lang.org/en/2.1.0/Time.html#method-i-strptime') strptime)
+        %a(href='http://docs.ruby-lang.org/en/2.2.0/Time.html#method-i-strptime') strptime)
       %textarea(name='time_format' rows=1)&= @time_format
 
       - if @error
