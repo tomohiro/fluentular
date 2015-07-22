@@ -4,6 +4,7 @@ require 'sinatra'
 require 'fluent/version'
 require 'fluent/log'
 require 'fluent/config'
+require 'fluent/plugin'
 require 'fluent/engine'
 require 'fluent/parser'
 
