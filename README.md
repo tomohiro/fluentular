@@ -4,10 +4,11 @@ Fluentular
 a Fluentd regular expression editor
 
 [![Stillmaintained](http://stillmaintained.com/Tomohiro/fluentular.png)](http://stillmaintained.com/Tomohiro/fluentular)
-[![Docker Support](http://img.shields.io/badge/docker-support-blue.svg?style=flat-square)](https://registry.hub.docker.com/u/tomohiro/fluentular)
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 [![Dependency Status](https://img.shields.io/gemnasium/Tomohiro/fluentular.svg?style=flat-square)](https://gemnasium.com/Tomohiro/fluentular)
 [![Build Status](https://img.shields.io/travis/Tomohiro/fluentular.svg?style=flat-square)](https://travis-ci.org/Tomohiro/fluentular)
+[![Docker Support](http://img.shields.io/badge/docker-support-blue.svg?style=flat-square)](https://registry.hub.docker.com/u/tomohiro/fluentular)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+
 
 ### Heroku Ready
 
