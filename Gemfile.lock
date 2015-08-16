@@ -13,12 +13,12 @@ GEM
       tzinfo (>= 1.0.0)
       tzinfo-data (>= 1.0.0)
       yajl-ruby (~> 1.0)
-    haml (4.0.6)
+    haml (4.0.7)
       tilt
     http_parser.rb (0.6.0)
     json (1.8.3)
     msgpack (0.5.12)
-    puma (2.12.3)
+    puma (2.13.3)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -49,7 +49,7 @@ GEM
     tilt (2.0.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2015.5)
+    tzinfo-data (1.2015.6)
       tzinfo (>= 1.0.0)
     yajl-ruby (1.2.1)
 
