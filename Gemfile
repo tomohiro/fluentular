@@ -10,4 +10,5 @@ group :test, :development do
   gem 'shotgun'
   gem 'rack-test'
   gem 'rspec'
+  gem 'coveralls', require: false
 end
