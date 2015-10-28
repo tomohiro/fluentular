@@ -1,12 +1,12 @@
 ENV['RACK_ENV'] = 'test'
 $LOAD_PATH.unshift(File.expand_path('../', File.dirname(__FILE__)))
 
+require 'coveralls'
+Coveralls.wear!
+
 require 'app'
 require 'rspec'
 require 'rack/test'
-
-require 'coveralls'
-Coveralls.wear!
 
 describe 'Fluentular' do
   include Rack::Test::Methods
