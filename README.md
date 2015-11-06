@@ -11,6 +11,9 @@ a Fluentd regular expression editor
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
 
+![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/6202037/ed7a9662-b512-11e4-93a5-3640aaf900a5.png)
+
+
 ### Heroku Ready
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
@@ -25,10 +28,28 @@ $ docker pull tomohiro/fluentular
 $ docker run -d -p 3000:3000 tomohiro/fluentular
 ```
 
+### Elastic Beanstalk Support
 
-### Screenshot
+Supported Platforms:
 
-![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/6202037/ed7a9662-b512-11e4-93a5-3640aaf900a5.png)
+Platform | Version
+-------- | ---------------------------------------------------------------------
+Ruby     | Ruby 2.2 (Puma)
+Docker   | 1.7.1
+
+Create an Application:
+
+```sh
+$ eb init
+```
+
+Create an Environment:
+
+```sh
+$ eb create
+```
+
+[Deploying a Sinatra Application to AWS Elastic Beanstalk - Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_sinatra.html)
 
 
 Inspired
