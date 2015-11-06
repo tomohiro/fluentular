@@ -19,7 +19,7 @@ a Fluentd regular expression editor
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 
-### Docker Support
+### :whale: Docker Support
 
 You can download and run fluentular container from [DockerHub](https://registry.hub.docker.com/u/tomohiro/fluentular/):
 
@@ -28,7 +28,7 @@ $ docker pull tomohiro/fluentular
 $ docker run -d -p 3000:3000 tomohiro/fluentular
 ```
 
-### Elastic Beanstalk Support
+### :seedling: Elastic Beanstalk Support
 
 Supported Platforms:
 
@@ -49,7 +49,7 @@ Create an Environment:
 $ eb create
 ```
 
-[Deploying a Sinatra Application to AWS Elastic Beanstalk - Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_sinatra.html)
+See [Deploying a Sinatra Application to AWS Elastic Beanstalk - Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_sinatra.html)
 
 
 Inspired
