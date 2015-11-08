@@ -12,7 +12,7 @@ GEM
     docile (1.1.5)
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
-    fluentd (0.12.16)
+    fluentd (0.12.17)
       cool.io (>= 1.2.2, < 2.0.0)
       http_parser.rb (>= 0.5.1, < 0.7.0)
       json (>= 1.4.3)
@@ -31,7 +31,7 @@ GEM
     mime-types (2.6.2)
     msgpack (0.5.12)
     netrc (0.11.0)
-    puma (2.14.0)
+    puma (2.15.3)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
