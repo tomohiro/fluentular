@@ -11,7 +11,7 @@ a Fluentd regular expression editor
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
 
-![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/6202037/ed7a9662-b512-11e4-93a5-3640aaf900a5.png)
+![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/11119798/642cf592-898f-11e5-906d-527bef2db8c3.png)
 
 
 ### Heroku Ready
