@@ -57,7 +57,7 @@ $ eb create
 
 You can use Dockerrun.aws.json when creating a new environment.
 
-https://s3-ap-northeast-1.amazonaws.com/fluentular/Dockerrun.aws.json
+https://fluentular.s3.amazonaws.com/Dockerrun.aws.json
 
 ![Create a new environment](https://cloud.githubusercontent.com/assets/54254/11200269/0a94db62-8d18-11e5-8e9e-d9ccbd994eea.png)
 
