@@ -37,10 +37,13 @@ Platform | Version
 Ruby     | Ruby 2.2 (Puma)
 Docker   | 1.7.1
 
+
+#### EB Command Line Interface
+
 Create an Application:
 
 ```sh
-$ eb init
+$ eb init # Choose a platform from Ruby or Docker
 ```
 
 Create an Environment:
@@ -49,7 +52,17 @@ Create an Environment:
 $ eb create
 ```
 
-See [Deploying a Sinatra Application to AWS Elastic Beanstalk - Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_sinatra.html)
+
+#### AWS Console
+
+You can use Dockerrun.aws.json when creating a new environment.
+
+https://s3-ap-northeast-1.amazonaws.com/fluentular/Dockerrun.aws.json
+
+![Create a new environment](https://cloud.githubusercontent.com/assets/54254/11200269/0a94db62-8d18-11e5-8e9e-d9ccbd994eea.png)
+
+
+For more information, see [Deploying a Sinatra Application to AWS Elastic Beanstalk - Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_sinatra.html).
 
 
 Acknowledgment
