@@ -21,7 +21,7 @@ a Fluentd regular expression editor
 
 ### :whale: Docker Support
 
-You can download and run fluentular container from [DockerHub](https://registry.hub.docker.com/u/tomohiro/fluentular/):
+You can download and run Fluentular container from [DockerHub](https://registry.hub.docker.com/u/tomohiro/fluentular/):
 
 ```
 $ docker pull tomohiro/fluentular
@@ -52,7 +52,7 @@ $ eb create
 See [Deploying a Sinatra Application to AWS Elastic Beanstalk - Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_sinatra.html)
 
 
-Inspired
+Acknowledgment
 -------------------------------------------------------------------------------
 
 - [fluentdのformat(正規表現)の作り方について試行錯誤中 #fluentd - Glide Note - グライドノート](http://blog.glidenote.com/blog/2012/07/15/fluentd-regex-debug/)
