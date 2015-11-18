@@ -15,7 +15,7 @@ get '/' do
 end
 
 get '/parse' do
-  @regexp      = params[:regexp].gsub(/^\/(.+)\/$/, '\1')
+  @regexp      = params[:regexp].gsub(%r{^\/(.+)\/$}, '\1')
   @input       = params[:input]
   @time_format = params[:time_format]
   @error       = nil
