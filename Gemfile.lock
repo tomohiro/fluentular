@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    cool.io (1.4.1)
+    cool.io (1.4.2)
     coveralls (0.8.9)
       json (~> 1.8)
       rest-client (>= 1.6.8, < 2)
@@ -29,7 +29,7 @@ GEM
       domain_name (~> 0.5)
     http_parser.rb (0.6.0)
     json (1.8.3)
-    mime-types (2.6.2)
+    mime-types (2.99)
     msgpack (0.5.12)
     netrc (0.11.0)
     puma (2.15.3)
@@ -46,7 +46,7 @@ GEM
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
-    rspec-core (3.4.0)
+    rspec-core (3.4.1)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -54,7 +54,7 @@ GEM
     rspec-mocks (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
-    rspec-support (3.4.0)
+    rspec-support (3.4.1)
     shotgun (0.9.1)
       rack (>= 1.0)
     sigdump (0.2.3)
