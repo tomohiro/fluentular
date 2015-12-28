@@ -13,7 +13,7 @@ GEM
     docile (1.1.5)
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
-    fluentd (0.12.18)
+    fluentd (0.12.19)
       cool.io (>= 1.2.2, < 2.0.0)
       http_parser.rb (>= 0.5.1, < 0.7.0)
       json (>= 1.4.3)
