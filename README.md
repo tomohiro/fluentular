@@ -3,7 +3,6 @@ Fluentular
 
 a Fluentd regular expression editor
 
-[![Stillmaintained](http://stillmaintained.com/Tomohiro/fluentular.png)](http://stillmaintained.com/Tomohiro/fluentular)
 [![Dependency Status](https://img.shields.io/gemnasium/Tomohiro/fluentular.svg?style=flat-square)](https://gemnasium.com/Tomohiro/fluentular)
 [![Build Status](https://img.shields.io/travis/Tomohiro/fluentular.svg?style=flat-square)](https://travis-ci.org/Tomohiro/fluentular)
 [![Coverage Status](https://img.shields.io/coveralls/Tomohiro/fluentular.svg?style=flat-square)](https://coveralls.io/github/Tomohiro/fluentular)
