@@ -65,7 +65,7 @@ GEM
     tins (1.6.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2016.2)
+    tzinfo-data (1.2016.3)
       tzinfo (>= 1.0.0)
     yajl-ruby (1.2.1)
 
