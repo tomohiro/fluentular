@@ -127,18 +127,12 @@ __END__
       = yield
 
     %footer.row.small-centered.columns
-      %section.small-12.medium-5.columns
+      %section.small-12.columns
         %p
-          &copy; 2012 - 2015 Made with
+          &copy; 2012 - 2016 Made with
           %i.fa.fa-heart
           by
           %a(href='https://github.com/Tomohiro') Tomohiro TAIRA
-      %section.small-12.medium-4.columns.medium-offset-3
-        %p
-          Powered by
-          %a(href='http://www.sinatrarb.com/') Sinatra
-          Hosted on
-          %a(href='http://heroku.com') Heroku
 
 @@ index
 %div.row
