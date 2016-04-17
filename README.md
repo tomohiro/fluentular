@@ -24,7 +24,7 @@ You can download and run Fluentular container from [DockerHub](https://registry.
 
 ```
 $ docker pull tomohiro/fluentular
-$ docker run -d -p 3000:3000 tomohiro/fluentular
+$ docker run -d -p 8080:8080 tomohiro/fluentular
 ```
 
 ### :seedling: Elastic Beanstalk Support
