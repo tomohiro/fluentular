@@ -13,12 +13,21 @@ a Fluentd regular expression editor
 ![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/11119798/642cf592-898f-11e5-906d-527bef2db8c3.png)
 
 
-### Heroku Ready
+Platforms
+--------------------------------------------------------------------------------
+
+- [Heroku](#heroku)
+- [Docker](#docker)
+- [AWS Elastic Beanstalk](#aws-elastic-beanstalk)
+- [Google App Engine](#google-app-engine)
+
+
+### Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 
-### :whale: Docker Support
+### Docker
 
 You can download and run Fluentular container from [DockerHub](https://registry.hub.docker.com/u/tomohiro/fluentular/):
 
@@ -27,7 +36,7 @@ $ docker pull tomohiro/fluentular
 $ docker run -d -p 8080:8080 tomohiro/fluentular
 ```
 
-### :seedling: Elastic Beanstalk Support
+### AWS Elastic Beanstalk
 
 Supported Platforms:
 
@@ -37,7 +46,7 @@ Ruby     | Ruby 2.2 (Puma)
 Docker   | 1.7.1
 
 
-#### EB Command Line Interface
+#### Using EB Command Line Interface
 
 Create an Application:
 
@@ -52,7 +61,7 @@ $ eb create
 ```
 
 
-#### AWS Console
+#### Using AWS Console
 
 You can use Dockerrun.aws.json when creating a new environment.
 
@@ -62,6 +71,13 @@ https://fluentular.s3.amazonaws.com/Dockerrun.aws.json
 
 
 For more information, see [Deploying a Sinatra Application to AWS Elastic Beanstalk - Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_sinatra.html).
+
+
+### Google App Engine
+
+```sh
+$ gcloud preview app deploy
+```
 
 
 Acknowledgment
@@ -76,6 +92,6 @@ Acknowledgment
 LICENSE
 --------------------------------------------------------------------------------
 
-&copy; 2012 - 2015 Tomohiro TAIRA.
+&copy; 2012 - 2016 Tomohiro TAIRA.
 
 This project licensed under the MIT license. See [LICENSE](LICENSE) for details.
