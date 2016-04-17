@@ -1,0 +1,11 @@
+# Google App Engine Configuration
+# https://cloud.google.com/appengine/docs/flexible/custom-runtimes/configuring-your-app-with-app-yaml
+
+# General settings
+runtime: custom
+vm: true
+api_version: 1
+
+# Scaling settings
+manual_scaling:
+  instances: 1
