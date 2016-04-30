@@ -1,4 +1,4 @@
-FROM        ruby:2.3-onbuild
+FROM        tomohiro/ruby:latest
 MAINTAINER  Tomohiro TAIRA <tomohiro.t@gmail.com>
 
 EXPOSE      8080
