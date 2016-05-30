@@ -10,7 +10,7 @@ GEM
       tins (~> 1.6.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
-    fluentd (0.12.25)
+    fluentd (0.12.26)
       cool.io (>= 1.2.2, < 2.0.0)
       http_parser.rb (>= 0.5.1, < 0.7.0)
       json (>= 1.4.3)
