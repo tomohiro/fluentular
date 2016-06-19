@@ -28,7 +28,11 @@ get '/parse' do
         Fluent::Config::Element.new('', '', { 'time_format' => @time_format }, [])
       )
     end
-    @parsed_time, @parsed = parser.call(@input)
+
+    parser.call(@input) do |parsed_time, parsed|
+      @parsed_time = parsed_time
+      @parsed      = parsed
+    end
   rescue Fluent::TextParser::ParserError, RegexpError => e
     @error = e
     @parsed_time = @parsed = nil
