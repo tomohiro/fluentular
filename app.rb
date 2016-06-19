@@ -7,6 +7,7 @@ require 'fluent/config'
 require 'fluent/plugin'
 require 'fluent/engine'
 require 'fluent/parser'
+require 'tilt/haml'
 
 set :haml, format: :html5
 
