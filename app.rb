@@ -5,8 +5,7 @@ require 'fluent/version'
 require 'fluent/log'
 require 'fluent/config'
 require 'fluent/plugin'
-require 'fluent/engine'
-require 'fluent/parser'
+require 'fluent/plugin/parser'
 require 'tilt/haml'
 
 set :haml, format: :html5
@@ -22,7 +21,7 @@ get '/parse' do
   @error       = nil
 
   begin
-    parser = Fluent::TextParser::RegexpParser.new(Regexp.new(@regexp))
+    parser = Fluent::Plugin::RegexpParser.new(Regexp.new(@regexp))
     unless @time_format.empty?
       parser.configure(
         Fluent::Config::Element.new('', '', { 'time_format' => @time_format }, [])
@@ -33,7 +32,7 @@ get '/parse' do
       @parsed_time = parsed_time
       @parsed      = parsed
     end
-  rescue Fluent::TextParser::ParserError, RegexpError => e
+  rescue Fluent::Plugin::Parser::ParserError, RegexpError => e
     @error = e
     @parsed_time = @parsed = nil
   end
