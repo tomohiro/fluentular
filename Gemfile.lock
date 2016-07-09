@@ -25,7 +25,7 @@ GEM
       tilt
     http_parser.rb (0.6.0)
     json (2.0.1)
-    msgpack (0.7.6)
+    msgpack (1.0.0)
     puma (3.4.0)
     rack (1.6.4)
     rack-protection (1.5.3)
