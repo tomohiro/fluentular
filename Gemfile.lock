@@ -24,7 +24,7 @@ GEM
     haml (4.0.7)
       tilt
     http_parser.rb (0.6.0)
-    json (2.0.1)
+    json (2.0.2)
     msgpack (1.0.0)
     puma (3.6.0)
     rack (1.6.4)
