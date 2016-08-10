@@ -2,7 +2,7 @@
 
 require 'sinatra'
 require 'fluent/version'
-require 'fluent/plugin/parser'
+require 'fluent/compat/parser'
 
 set :haml, format: :html5
 
@@ -17,7 +17,7 @@ get '/parse' do
   @error       = nil
 
   begin
-    parser = Fluent::Plugin::RegexpParser.new(Regexp.new(@regexp))
+    parser = Fluent::Compat::TextParser::RegexpParser.new(Regexp.new(@regexp))
     unless @time_format.empty?
       parser.configure(
         Fluent::Config::Element.new('', '', { 'time_format' => @time_format }, [])
