@@ -6,6 +6,8 @@ require 'fluent/compat/parser'
 
 set :haml, format: :html5
 
+enable :inline_templates
+
 get '/' do
   haml :index
 end
