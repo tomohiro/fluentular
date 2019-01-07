@@ -37,7 +37,7 @@ describe 'Fluentular' do
       it 'returns parsed records' do
         get '/parse', params do
           expect(last_response).to be_ok
-          expect(last_response).to match '<th>host</th>\n.+<td>example.com</td>'
+          expect(last_response).to match '<th>host</th>\n<td>example.com</td>'
         end
       end
     end
@@ -54,8 +54,8 @@ describe 'Fluentular' do
         get '/parse', params do
           expect_timestamp = Time.strptime('25/Nov/2013:18:09:45 +0900', time_format).strftime("%Y/%m/%d %H:%M:%S %z")
           expect(last_response).to be_ok
-          expect(last_response).to match '<th>host</th>\n.+<td>example.com</td>'
-          expect(last_response).to match '<th[^>]*>time</th>\n.+<td[^>]*>' + Regexp.escape(expect_timestamp) + '</td>'
+          expect(last_response).to match '<th>host</th>\n<td>example.com</td>'
+          expect(last_response).to match '<th[^>]*>time</th>\n<td[^>]*>' + Regexp.escape(expect_timestamp) + '</td>'
         end
       end
     end
