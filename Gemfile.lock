@@ -69,7 +69,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2016.6)
       tzinfo (>= 1.0.0)
-    yajl-ruby (1.2.1)
+    yajl-ruby (1.4.1)
 
 PLATFORMS
   ruby
@@ -84,5 +84,8 @@ DEPENDENCIES
   shotgun
   sinatra
 
+RUBY VERSION
+   ruby 2.6.0p0
+
 BUNDLED WITH
-   1.10.6
+   1.17.2
