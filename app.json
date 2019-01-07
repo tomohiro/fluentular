@@ -3,5 +3,6 @@
   "description": "Fluentular is a Fluentd regular expression editor",
   "repository": "https://github.com/Tomohiro/fluentular",
   "keywords": ["ruby", "sinatra", "fluentd"],
-  "website": "http://fluentular.herokuapp.com"
+  "website": "http://fluentular.herokuapp.com",
+  "stack": "heroku-18"
 }
