@@ -1,14 +1,16 @@
-source 'https://rubygems.org'
-ruby '2.3.1'
+# frozen_string_literal: true
 
-gem 'sinatra'
-gem 'puma'
-gem 'haml'
-gem 'fluentd'
+source "https://rubygems.org"
+ruby "2.6.0"
+
+gem "fluentd"
+gem "haml"
+gem "puma"
+gem "sinatra"
 
 group :test, :development do
-  gem 'shotgun'
-  gem 'rack-test'
-  gem 'rspec'
-  gem 'coveralls', require: false
+  gem "coveralls", require: false
+  gem "rack-test"
+  gem "rspec"
+  gem "shotgun"
 end
