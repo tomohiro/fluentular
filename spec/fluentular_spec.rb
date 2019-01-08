@@ -68,7 +68,7 @@ describe 'Fluentular' do
       it 'returns no records' do
         get '/parse', params do
           expect(last_response).to be_ok
-          expect(last_response).not_to match '<th>host</th>\n.+<td>example.com</td>'
+          expect(last_response).not_to match '<th>host</th>\n<td>example.com</td>'
         end
       end
     end
