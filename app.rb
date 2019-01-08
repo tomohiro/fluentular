@@ -129,10 +129,10 @@ __END__
     %footer.row.small-centered.columns
       %section.small-12.columns
         %p
-          &copy; 2012 - 2016 Made with
+          &copy; 2012 - 2019 Made with
           %i.fa.fa-heart
           by
-          %a(href='https://github.com/Tomohiro') Tomohiro TAIRA
+          %a(href='https://github.com/Tomohiro') Tomohiro Taira
 
 @@ index
 %div.row
@@ -150,8 +150,8 @@ __END__
 
       %label
         %i.fa.fa-clock-o
-        Custom Time Format (see also ruby document;
-        %a(href='http://docs.ruby-lang.org/en/2.2.0/Time.html#method-i-strptime') strptime)
+        Custom Time Format (See also ruby document;
+        %a(href='https://docs.ruby-lang.org/en/2.6.0/Time.html#method-i-strptime') strptime)
       %textarea(name='time_format' rows=1)&= @time_format
 
       - if @error

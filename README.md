@@ -92,6 +92,6 @@ Acknowledgment
 LICENSE
 --------------------------------------------------------------------------------
 
-&copy; 2012 - 2016 Tomohiro TAIRA.
+&copy; 2012 - 2019 Tomohiro TAIRA.
 
 This project licensed under the MIT license. See [LICENSE](LICENSE) for details.
