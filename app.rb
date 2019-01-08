@@ -60,7 +60,7 @@ __END__
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     :css
-      @import url(http://fonts.googleapis.com/css?family=Squada+One);
+      @import url(//fonts.googleapis.com/css?family=Squada+One);
       body {
         border-top: 7px solid #2795b6;
         padding-top: 10px;
