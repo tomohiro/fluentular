@@ -2,7 +2,8 @@
 
 require 'sinatra'
 require 'fluent/version'
-require 'fluent/compat/parser'
+require 'fluent/engine'
+require 'fluent/plugin/parser_regexp'
 
 set :haml, format: :html5
 
@@ -17,14 +18,15 @@ get '/parse' do
   @error       = nil
 
   begin
-    parser = Fluent::Compat::TextParser::RegexpParser.new(Regexp.new(@regexp))
-    unless @time_format.empty?
-      parser.configure(
-        Fluent::Config::Element.new('', '', { 'time_format' => @time_format }, [])
-      )
-    end
-
-    parser.call(@input) do |parsed_time, parsed|
+    parser = Fluent::Plugin::RegexpParser.new
+    conf = {
+      'expression'  => @regexp,
+      'time_format' => @time_format
+    }
+    parser.configure(
+      Fluent::Config::Element.new('', '', conf, [])
+    )
+    parser.parse(@input) do |parsed_time, parsed|
       @parsed_time = parsed_time
       @parsed      = parsed
     end
