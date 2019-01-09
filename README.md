@@ -1,11 +1,11 @@
 Fluentular
+[![Heroku App](https://img.shields.io/badge/heroku-ready-430098.svg?style=flat-square&logo=heroku&logoColor=white)](https://fluentular.herokuapp.com)
 [![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/)
 [![LICENSE](https://img.shields.io/github/license/Tomohiro/fluentular.svg?style=flat-square)](LICENSE)
 ================================================================================
 
 a Fluentd regular expression editor
 
-[![Heroku App](https://img.shields.io/badge/heroku-ready-430098.svg?style=flat-square&logo=heroku&logoColor=white)](https://fluentular.herokuapp.com)
 [![Docker Image Size](https://img.shields.io/microbadger/image-size/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://microbadger.com/images/tomohiro/fluentular)
 [![Docker Build Status](https://img.shields.io/docker/build/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/builds)
 [![Build Status](https://img.shields.io/travis/Tomohiro/fluentular.svg?style=flat-square&logo=travis)](https://travis-ci.org/Tomohiro/fluentular)
@@ -45,8 +45,8 @@ Supported Platforms:
 
 Platform | Version
 -------- | ---------------------------------------------------------------------
-Ruby     | Ruby 2.2 (Puma)
-Docker   | 1.7.1
+Ruby     | Ruby 2.6 (Puma)
+Docker   | 18.09.0 or later
 
 
 #### Using EB Command Line Interface
