@@ -8,6 +8,7 @@ a Fluentd regular expression editor
 [![Build Status](https://img.shields.io/travis/Tomohiro/fluentular.svg?style=flat-square)](https://travis-ci.org/Tomohiro/fluentular)
 [![Coverage Status](https://img.shields.io/coveralls/Tomohiro/fluentular.svg?style=flat-square)](https://coveralls.io/github/Tomohiro/fluentular)
 [![Dependency Status](https://img.shields.io/librariesio/github/Tomohiro/fluentular.svg?style=flat-square)](https://libraries.io/github/Tomohiro/fluentular)
+[![Code Climate](https://img.shields.io/codeclimate/tech-debt/Tomohiro%2Ffluentular.svg?style=flat-square)](https://codeclimate.com/github/Tomohiro/fluentular)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
 
