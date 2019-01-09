@@ -3,6 +3,7 @@ Fluentular
 
 a Fluentd regular expression editor
 
+[![Heroku App](https://img.shields.io/badge/heroku-ready-lightgrey.svg?style=flat-square&logo=heroku&colorA=430098&logoColor=white)](https://fluentular.herokuapp.com)
 [![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square)](https://hub.docker.com/r/tomohiro/fluentular/)
 [![Docker Image Size](https://img.shields.io/microbadger/image-size/tomohiro%2Ffluentular.svg?style=flat-square)](https://microbadger.com/images/tomohiro/fluentular)
 [![Build Status](https://img.shields.io/travis/Tomohiro/fluentular.svg?style=flat-square)](https://travis-ci.org/Tomohiro/fluentular)
