@@ -1,14 +1,16 @@
 Fluentular
+[![LICENSE](https://img.shields.io/github/license/Tomohiro/fluentular.svg?style=flat-square)](LICENSE)
 ================================================================================
 
 a Fluentd regular expression editor
 
-[![Dependency Status](https://img.shields.io/gemnasium/Tomohiro/fluentular.svg?style=flat-square)](https://gemnasium.com/Tomohiro/fluentular)
-[![Build Status](https://img.shields.io/travis/Tomohiro/fluentular.svg?style=flat-square)](https://travis-ci.org/Tomohiro/fluentular)
+[![Heroku App](https://img.shields.io/badge/heroku-ready-430098.svg?style=flat-square&logo=heroku&logoColor=white)](https://fluentular.herokuapp.com)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/)
+[![Docker Image Size](https://img.shields.io/microbadger/image-size/tomohiro%2Ffluentular.svg?style=flat-square&logo=docker)](https://microbadger.com/images/tomohiro/fluentular)
+[![Build Status](https://img.shields.io/travis/Tomohiro/fluentular.svg?style=flat-square&logo=travis)](https://travis-ci.org/Tomohiro/fluentular)
 [![Coverage Status](https://img.shields.io/coveralls/Tomohiro/fluentular.svg?style=flat-square)](https://coveralls.io/github/Tomohiro/fluentular)
-[![ImageLayers](https://badge.imagelayers.io/tomohiro/fluentular:latest.svg)](https://imagelayers.io/?images=tomohiro/fluentular:latest)
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
-
+[![Dependency Status](https://img.shields.io/librariesio/github/Tomohiro/fluentular.svg?style=flat-square)](https://libraries.io/github/Tomohiro/fluentular)
+[![Code Climate](https://img.shields.io/codeclimate/tech-debt/Tomohiro%2Ffluentular.svg?style=flat-square)](https://codeclimate.com/github/Tomohiro/fluentular)
 
 ![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/11119798/642cf592-898f-11e5-906d-527bef2db8c3.png)
 
