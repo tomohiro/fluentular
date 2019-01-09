@@ -95,7 +95,7 @@ describe 'Fluentular' do
 
       it 'returns error message' do
         get '/parse', params do
-          expect(last_response).to match 'invalid strptime format'
+          expect(last_response).to match 'invalid time format'
         end
       end
     end
