@@ -3,7 +3,7 @@ Fluentular
 
 a Fluentd regular expression editor
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg)](https://hub.docker.com/r/tomohiro/fluentular/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square)](https://hub.docker.com/r/tomohiro/fluentular/)
 [![Docker Image Size](https://img.shields.io/microbadger/image-size/tomohiro%2Ffluentular.svg?style=flat-square)](https://microbadger.com/images/tomohiro/fluentular)
 [![Build Status](https://img.shields.io/travis/Tomohiro/fluentular.svg?style=flat-square)](https://travis-ci.org/Tomohiro/fluentular)
 [![Coverage Status](https://img.shields.io/coveralls/Tomohiro/fluentular.svg?style=flat-square)](https://coveralls.io/github/Tomohiro/fluentular)
