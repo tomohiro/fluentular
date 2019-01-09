@@ -1,17 +1,16 @@
 Fluentular
+[![LICENSE](https://img.shields.io/github/license/Tomohiro/fluentular.svg?style=flat-square)](LICENSE)
 ================================================================================
 
 a Fluentd regular expression editor
 
-[![Heroku App](https://img.shields.io/badge/heroku-ready-lightgrey.svg?style=flat-square&logo=heroku&colorA=430098&logoColor=white)](https://fluentular.herokuapp.com)
-[![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square)](https://hub.docker.com/r/tomohiro/fluentular/)
-[![Docker Image Size](https://img.shields.io/microbadger/image-size/tomohiro%2Ffluentular.svg?style=flat-square)](https://microbadger.com/images/tomohiro/fluentular)
-[![Build Status](https://img.shields.io/travis/Tomohiro/fluentular.svg?style=flat-square)](https://travis-ci.org/Tomohiro/fluentular)
+[![Heroku App](https://img.shields.io/badge/heroku-ready-430098.svg?style=flat-square&logo=heroku&logoColor=white)](https://fluentular.herokuapp.com)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/)
+[![Docker Image Size](https://img.shields.io/microbadger/image-size/tomohiro%2Ffluentular.svg?style=flat-square&logo=docker)](https://microbadger.com/images/tomohiro/fluentular)
+[![Build Status](https://img.shields.io/travis/Tomohiro/fluentular.svg?style=flat-square&logo=travis)](https://travis-ci.org/Tomohiro/fluentular)
 [![Coverage Status](https://img.shields.io/coveralls/Tomohiro/fluentular.svg?style=flat-square)](https://coveralls.io/github/Tomohiro/fluentular)
 [![Dependency Status](https://img.shields.io/librariesio/github/Tomohiro/fluentular.svg?style=flat-square)](https://libraries.io/github/Tomohiro/fluentular)
 [![Code Climate](https://img.shields.io/codeclimate/tech-debt/Tomohiro%2Ffluentular.svg?style=flat-square)](https://codeclimate.com/github/Tomohiro/fluentular)
-[![LICENSE](https://img.shields.io/github/license/Tomohiro/fluentular.svg?style=flat-square)](LICENSE)
-
 
 ![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/11119798/642cf592-898f-11e5-906d-527bef2db8c3.png)
 
