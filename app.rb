@@ -30,7 +30,7 @@ get '/parse' do
       @parsed_time = parsed_time
       @parsed      = parsed
     end
-  rescue Fluent::Plugin::Parser::ParserError, RegexpError => e
+  rescue Fluent::Plugin::Parser::ParserError, Fluent::ConfigError, RegexpError => e
     @error = e
     @parsed_time = @parsed = nil
   end
