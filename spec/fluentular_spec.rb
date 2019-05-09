@@ -66,7 +66,7 @@ describe 'Fluentular' do
         }
       end
 
-      it { is_expected.to be_ok }
+      it { is_expected.to be_bad_request }
       it { is_expected.not_to match '<th>host</th>\n<td>example.com</td>' }
     end
 
@@ -79,7 +79,7 @@ describe 'Fluentular' do
         }
       end
 
-      it { is_expected.to be_ok }
+      it { is_expected.to be_bad_request }
       it { is_expected.to match 'empty char-class' }
     end
 
@@ -92,8 +92,15 @@ describe 'Fluentular' do
         }
       end
 
-      it { is_expected.to be_ok }
+      it { is_expected.to be_bad_request }
       it { is_expected.to match 'invalid time format' }
     end
+  end
+
+  describe 'GET /NOT_EXISTS_PAGE' do
+    before { get '/NOT_EXISTS_PAGE' }
+
+    it { is_expected.to be_not_found }
+    it { is_expected.to match '<h1>Not Found</h1>' }
   end
 end
