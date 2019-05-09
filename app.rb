@@ -37,8 +37,10 @@ get '/parse' do
       @parsed      = parsed
     end
   rescue *HANDLE_ERRORS => e
+    status 400
     @error = e
-    @parsed_time = @parsed = nil
+    @parsed_time = nil
+    @parsed = nil
   end
 
   haml :index
