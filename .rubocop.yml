@@ -1,0 +1,11 @@
+# Add `rubocop-rspec` as optional plugin
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.6
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'

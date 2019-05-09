@@ -12,5 +12,8 @@ group :test, :development do
   gem "coveralls", require: false
   gem "rack-test"
   gem "rspec"
+  gem "rubocop"
+  gem "rubocop-performance"
+  gem "rubocop-rspec"
   gem "shotgun"
 end
