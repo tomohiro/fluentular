@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ENV['RACK_ENV'] = 'test'
 $LOAD_PATH.unshift(File.expand_path('../', File.dirname(__FILE__)))
 
@@ -11,93 +13,87 @@ require 'rack/test'
 describe 'Fluentular' do
   include Rack::Test::Methods
 
+  subject { last_response }
+
   let(:app) do
     Sinatra::Application
   end
 
   describe 'GET /' do
-    it 'returns an index' do
-      get '/'
-      expect(last_response).to be_ok
-      expect(last_response.body).to match 'Fluentular'
-    end
+    before { get '/' }
+
+    it { is_expected.to be_ok }
+    it { is_expected.to match 'Fluentular' }
   end
 
   describe 'GET /parse' do
-    let(:params) do
-      { input: '', regexp: '', time_format: '' }
-    end
+    before { get '/parse', request_params }
 
     context 'with valid regular expression' do
-      before do
-        params[:input]  = 'example.com'
-        params[:regexp] = '(?<host>[^ ]*)'
+      let(:request_params) do
+        {
+          input: 'example.com',
+          regexp: '(?<host>[^ ]*)',
+          time_format: ''
+        }
       end
 
-      it 'returns parsed records' do
-        get '/parse', params do
-          expect(last_response).to be_ok
-          expect(last_response).to match '<th>host</th>\n<td>example.com</td>'
-        end
-      end
+      it { is_expected.to be_ok }
+      it { is_expected.to match '<th>host</th>\n<td>example.com</td>' }
     end
 
     context 'with parsing valid time format' do
-      time_format = '%d/%b/%Y:%H:%M:%S %z'
-      before do
-        params[:input]  = '25/Nov/2013:18:09:45 +0900 example.com'
-        params[:regexp] = '(?<time>[^ ]* [^ ]*) (?<host>[^ ]*)'
-        params[:time_format] = time_format
+      let(:request_params) do
+        {
+          input: '25/Nov/2013:18:09:45 +0900 example.com',
+          regexp: '(?<time>[^ ]* [^ ]*) (?<host>[^ ]*)',
+          time_format: '%d/%b/%Y:%H:%M:%S %z'
+        }
       end
+      let(:timestamp) { Regexp.escape('2013/11/25 18:09:45 +0900') }
 
-      it 'returns parsed time' do
-        get '/parse', params do
-          expect_timestamp = Time.strptime('25/Nov/2013:18:09:45 +0900', time_format).strftime("%Y/%m/%d %H:%M:%S %z")
-          expect(last_response).to be_ok
-          expect(last_response).to match '<th>host</th>\n<td>example.com</td>'
-          expect(last_response).to match '<th[^>]*>time</th>\n<td[^>]*>' + Regexp.escape(expect_timestamp) + '</td>'
-        end
-      end
+      it { is_expected.to be_ok }
+      it { is_expected.to match '<th>host</th>\n<td>example.com</td>' }
+      it { is_expected.to match "<th.+>time</th>\\n<td.+>#{timestamp}</td>" }
     end
 
     context 'with empty regular expression' do
-      before do
-        params[:input] = 'example.com'
+      let(:request_params) do
+        {
+          input: 'example.com',
+          regexp: '',
+          time_format: ''
+        }
       end
 
-      it 'returns no records' do
-        get '/parse', params do
-          expect(last_response).to be_ok
-          expect(last_response).not_to match '<th>host</th>\n<td>example.com</td>'
-        end
-      end
+      it { is_expected.to be_ok }
+      it { is_expected.not_to match '<th>host</th>\n<td>example.com</td>' }
     end
 
     context 'with invalid regular expression' do
-      before do
-        params[:input]  = 'example.com'
-        params[:regexp] = '(?<host>[^]*' # Unmatched parenthesis
+      let(:request_params) do
+        {
+          input: 'example.com',
+          regexp: '(?<host>[^]*', # Unmatched parenthesis
+          time_format: ''
+        }
       end
 
-      it 'returns error message' do
-        get '/parse', params do
-          expect(last_response).to match 'empty char-class'
-        end
-      end
+      it { is_expected.to be_ok }
+      it { is_expected.to match 'empty char-class' }
     end
 
     context 'with invalid time format' do
-      before do
-        params[:input]  = '25/Nov/2013:18:09:45 +0900 example.com'
-        params[:regexp] = '(?<time>[^ ]* [^ ]*) (?<host>[^ ]*)'
-        params[:time_format] = '%a' # Unmatched strptime format
+      let(:request_params) do
+        {
+          input: '25/Nov/2013:18:09:45 +0900 example.com',
+          regexp: '(?<time>[^ ]* [^ ]*) (?<host>[^ ]*)',
+          time_format: '%a' # Unmatched strptime format
+        }
       end
 
-      it 'returns error message' do
-        get '/parse', params do
-          expect(last_response).to match 'invalid time format'
-        end
-      end
+      it { is_expected.to be_ok }
+      it { is_expected.to match 'invalid time format' }
     end
   end
 end

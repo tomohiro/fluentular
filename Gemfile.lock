@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ast (2.4.0)
     cool.io (1.5.4)
     coveralls (0.8.23)
       json (>= 1.8, < 3)
@@ -26,15 +27,20 @@ GEM
       temple (>= 0.8.0)
       tilt
     http_parser.rb (0.6.0)
+    jaro_winkler (1.5.2)
     json (2.2.0)
     msgpack (1.2.9)
     mustermann (1.0.3)
+    parallel (1.17.0)
+    parser (2.6.3.0)
+      ast (~> 2.4.0)
     puma (3.12.1)
     rack (2.0.6)
     rack-protection (2.0.5)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
+    rainbow (3.0.0)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -48,6 +54,18 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    rubocop (0.68.1)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5, != 2.5.1.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 1.6)
+    rubocop-performance (1.2.0)
+      rubocop (>= 0.68.0)
+    rubocop-rspec (1.32.0)
+      rubocop (>= 0.60.0)
+    ruby-progressbar (1.10.0)
     serverengine (2.1.0)
       sigdump (~> 0.2.2)
     shotgun (0.9.2)
@@ -75,6 +93,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2019.1)
       tzinfo (>= 1.0.0)
+    unicode-display_width (1.5.0)
     yajl-ruby (1.4.1)
 
 PLATFORMS
@@ -87,6 +106,9 @@ DEPENDENCIES
   puma
   rack-test
   rspec
+  rubocop
+  rubocop-performance
+  rubocop-rspec
   shotgun
   sinatra
 

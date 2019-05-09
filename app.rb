@@ -1,9 +1,15 @@
-# enoding: utf-8
+# frozen_string_literal: true
 
 require 'sinatra'
 require 'fluent/version'
 require 'fluent/engine'
 require 'fluent/plugin/parser_regexp'
+
+HANDLE_ERRORS = [
+  Fluent::Plugin::Parser::ParserError,
+  Fluent::ConfigError,
+  RegexpError
+].freeze
 
 set :haml, format: :html5
 
@@ -20,7 +26,7 @@ get '/parse' do
   begin
     parser = Fluent::Plugin::RegexpParser.new
     conf = {
-      'expression'  => @regexp,
+      'expression' => @regexp,
       'time_format' => @time_format
     }
     parser.configure(
@@ -30,7 +36,7 @@ get '/parse' do
       @parsed_time = parsed_time
       @parsed      = parsed
     end
-  rescue Fluent::Plugin::Parser::ParserError, Fluent::ConfigError, RegexpError => e
+  rescue *HANDLE_ERRORS => e
     @error = e
     @parsed_time = @parsed = nil
   end
