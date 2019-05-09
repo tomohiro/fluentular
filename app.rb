@@ -20,7 +20,7 @@ get '/parse' do
   begin
     parser = Fluent::Plugin::RegexpParser.new
     conf = {
-      'expression'  => @regexp,
+      'expression' => @regexp,
       'time_format' => @time_format
     }
     parser.configure(
