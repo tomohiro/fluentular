@@ -1,4 +1,4 @@
-# enoding: utf-8
+# frozen_string_literal: true
 
 require 'sinatra'
 require 'fluent/version'
