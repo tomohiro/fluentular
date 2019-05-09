@@ -55,7 +55,7 @@ describe 'Fluentular' do
       it { is_expected.to be_ok }
       it { is_expected.to match '<th>host</th>\n<td>example.com</td>' }
       specify 'returns parsed time' do
-        expect_timestamp = Time.strptime('25/Nov/2013:18:09:45 +0900', time_format).strftime("%Y/%m/%d %H:%M:%S %z")
+        expect_timestamp = Time.strptime('25/Nov/2013:18:09:45 +0900', time_format).strftime('%Y/%m/%d %H:%M:%S %z')
         expect(last_response).to match '<th[^>]*>time</th>\n<td[^>]*>' + Regexp.escape(expect_timestamp) + '</td>'
       end
     end
