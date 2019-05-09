@@ -47,17 +47,14 @@ describe 'Fluentular' do
         {
           input: '25/Nov/2013:18:09:45 +0900 example.com',
           regexp: '(?<time>[^ ]* [^ ]*) (?<host>[^ ]*)',
-          time_format: time_format
+          time_format: '%d/%b/%Y:%H:%M:%S %z'
         }
       end
-      let(:time_format) { '%d/%b/%Y:%H:%M:%S %z' }
+      let(:timestamp) { Regexp.escape('2013/11/25 18:09:45 +0900') }
 
       it { is_expected.to be_ok }
       it { is_expected.to match '<th>host</th>\n<td>example.com</td>' }
-      specify 'returns parsed time' do
-        expect_timestamp = Time.strptime('25/Nov/2013:18:09:45 +0900', time_format).strftime('%Y/%m/%d %H:%M:%S %z')
-        expect(last_response).to match '<th[^>]*>time</th>\n<td[^>]*>' + Regexp.escape(expect_timestamp) + '</td>'
-      end
+      it { is_expected.to match "<th.+>time</th>\\n<td.+>#{timestamp}</td>" }
     end
 
     context 'with empty regular expression' do
