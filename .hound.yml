@@ -1,2 +1,4 @@
+# Disable Hound's default RuboCop config
+#   http://help.houndci.com/configuration/rubocop
 rubocop:
   enabled: false
