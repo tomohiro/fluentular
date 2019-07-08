@@ -10,7 +10,7 @@ require 'app'
 require 'rspec'
 require 'rack/test'
 
-describe 'Fluentular' do
+describe Fluentular do
   include Rack::Test::Methods
 
   subject { last_response }

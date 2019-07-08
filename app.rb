@@ -5,11 +5,15 @@ require 'fluent/version'
 require 'fluent/engine'
 require 'fluent/plugin/parser_regexp'
 
-HANDLE_ERRORS = [
-  Fluent::Plugin::Parser::ParserError,
-  Fluent::ConfigError,
-  RegexpError
-].freeze
+module Fluentular
+  VERSION = ::Fluent::VERSION
+
+  HANDLE_ERRORS = [
+    Fluent::Plugin::Parser::ParserError,
+    Fluent::ConfigError,
+    RegexpError
+  ].freeze
+end
 
 set :haml, format: :html5
 
@@ -36,7 +40,7 @@ get '/parse' do
       @parsed_time = parsed_time
       @parsed      = parsed
     end
-  rescue *HANDLE_ERRORS => e
+  rescue *Fluentular::HANDLE_ERRORS => e
     status 400
     @error = e
     @parsed_time = nil
