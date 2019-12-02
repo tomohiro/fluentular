@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'sinatra'
+require 'fluent/env'
 require 'fluent/version'
 require 'fluent/engine'
 require 'fluent/plugin/parser_regexp'
