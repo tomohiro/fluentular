@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 ruby '2.6.5'
 
-gem 'fluentd', '1.7.4'
+gem 'fluentd'
 gem 'haml'
 gem 'puma'
 gem 'sinatra'

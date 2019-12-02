@@ -103,7 +103,7 @@ PLATFORMS
 
 DEPENDENCIES
   coveralls
-  fluentd (= 1.7.4)
+  fluentd
   haml
   puma
   rack-test
