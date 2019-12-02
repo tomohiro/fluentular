@@ -12,7 +12,7 @@ GEM
     diff-lcs (1.3)
     dig_rb (1.0.1)
     docile (1.3.1)
-    fluentd (1.6.1)
+    fluentd (1.6.2)
       cool.io (>= 1.4.5, < 2.0.0)
       dig_rb (~> 1.0.0)
       http_parser.rb (>= 0.5.1, < 0.7.0)
@@ -103,7 +103,7 @@ PLATFORMS
 
 DEPENDENCIES
   coveralls
-  fluentd (= 1.6.1)
+  fluentd (= 1.6.2)
   haml
   puma
   rack-test
