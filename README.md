@@ -7,7 +7,7 @@ a Fluentd regular expression editor
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/)
 [![Build Status](https://img.shields.io/travis/tomohiro/fluentular.svg?style=flat-square&logo=travis)](https://travis-ci.org/Tomohiro/fluentular)
-[![Coverage Status](https://img.shields.io/coveralls/Tomohiro/fluentular.svg?style=flat-square&logo=reverbnation&logoColor=white)](https://coveralls.io/github/Tomohiro/fluentular)
+[![Coverage Status](https://img.shields.io/coveralls/Tomohiro/fluentular.svg?style=flat-square&logo=coveralls)](https://coveralls.io/github/Tomohiro/fluentular)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability-percentage/Tomohiro/fluentular.svg?style=flat-square&logo=code-climate)](https://codeclimate.com/github/Tomohiro/fluentular)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-success?style=flat-square&logo=dependabot)](https://libraries.io/github/tomohiro/fluentular)
 
