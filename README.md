@@ -1,13 +1,11 @@
 Fluentular
 [![Heroku App](https://img.shields.io/badge/heroku-ready-430098.svg?style=flat-square&logo=heroku&logoColor=white)](https://fluentular.herokuapp.com)
-[![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/)
 [![LICENSE](https://img.shields.io/github/license/Tomohiro/fluentular.svg?style=flat-square)](LICENSE)
 ================================================================================
 
 a Fluentd regular expression editor
 
-[![Docker Image Size](https://img.shields.io/microbadger/image-size/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://microbadger.com/images/tomohiro/fluentular)
-[![Docker Build Status](https://img.shields.io/docker/build/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/builds)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/)
 [![Build Status](https://img.shields.io/travis/tomohiro/fluentular.svg?style=flat-square&logo=travis)](https://travis-ci.org/Tomohiro/fluentular)
 [![Coverage Status](https://img.shields.io/coveralls/Tomohiro/fluentular.svg?style=flat-square&logo=reverbnation&logoColor=white)](https://coveralls.io/github/Tomohiro/fluentular)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability-percentage/Tomohiro/fluentular.svg?style=flat-square&logo=code-climate)](https://codeclimate.com/github/Tomohiro/fluentular)
