@@ -147,7 +147,7 @@ __END__
           &copy; 2012 - 2019 Made with
           %i.fa.fa-heart
           by
-          %a(href='https://github.com/Tomohiro') Tomohiro Taira
+          %a(href='https://github.com/tomohiro') Tomohiro Taira
 
 @@ index
 %div.row
