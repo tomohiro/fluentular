@@ -31,7 +31,7 @@ Platforms
 
 ### Docker
 
-You can download and run Fluentular container from [DockerHub](https://registry.hub.docker.com/u/tomohiro/fluentular/):
+You can download and run Fluentular container from [DockerHub](https://registry.hub.docker.com/r/tomohiro/fluentular):
 
 ```
 $ docker pull tomohiro/fluentular
