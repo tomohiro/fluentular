@@ -20,5 +20,5 @@ WORKDIR /usr/src/app
 COPY . .
 
 EXPOSE 8080
-ENTRYPOINT ["rackup"]
-CMD ["--host", "0.0.0.0", "-p", "8080"]
+ENTRYPOINT ["bundle"]
+CMD ["exec", "rackup", "--host", "0.0.0.0", "-p", "8080"]
