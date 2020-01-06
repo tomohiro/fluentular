@@ -1,14 +1,14 @@
 Fluentular
 [![Heroku App](https://img.shields.io/badge/heroku-ready-430098.svg?style=flat-square&logo=heroku&logoColor=white)](https://fluentular.herokuapp.com)
-[![LICENSE](https://img.shields.io/github/license/Tomohiro/fluentular.svg?style=flat-square)](LICENSE)
+[![LICENSE](https://img.shields.io/github/license/tomohiro/fluentular.svg?style=flat-square)](LICENSE)
 ================================================================================
 
 a Fluentd regular expression editor
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/)
-[![Build Status](https://img.shields.io/travis/tomohiro/fluentular.svg?style=flat-square&logo=travis)](https://travis-ci.org/Tomohiro/fluentular)
-[![Coverage Status](https://img.shields.io/coveralls/Tomohiro/fluentular.svg?style=flat-square&logo=coveralls)](https://coveralls.io/github/Tomohiro/fluentular)
-[![Code Climate](https://img.shields.io/codeclimate/maintainability-percentage/Tomohiro/fluentular.svg?style=flat-square&logo=code-climate)](https://codeclimate.com/github/Tomohiro/fluentular)
+[![Build Status](https://img.shields.io/travis/tomohiro/fluentular.svg?style=flat-square&logo=travis)](https://travis-ci.org/tomohiro/fluentular)
+[![Coverage Status](https://img.shields.io/coveralls/tomohiro/fluentular.svg?style=flat-square&logo=coveralls)](https://coveralls.io/github/tomohiro/fluentular)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability-percentage/tomohiro/fluentular.svg?style=flat-square&logo=code-climate)](https://codeclimate.com/github/tomohiro/fluentular)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-success?style=flat-square&logo=dependabot)](https://libraries.io/github/tomohiro/fluentular)
 
 
@@ -44,7 +44,7 @@ Supported Platforms:
 
 Platform | Version
 -------- | ---------------------------------------------------------------------
-Ruby     | Ruby 2.6 (Puma)
+Ruby     | Ruby 2.7 (Puma)
 Docker   | 18.09.0 or later
 
 
@@ -94,6 +94,6 @@ Acknowledgment
 LICENSE
 --------------------------------------------------------------------------------
 
-&copy; 2012 - 2019 Tomohiro Taira.
+&copy; 2012 - 2020 Tomohiro Taira.
 
 This project licensed under the MIT license. See [LICENSE](LICENSE) for details.

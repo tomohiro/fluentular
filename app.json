@@ -1,7 +1,7 @@
 {
   "name": "Fluentular",
   "description": "Fluentular is a Fluentd regular expression editor",
-  "repository": "https://github.com/Tomohiro/fluentular",
+  "repository": "https://github.com/tomohiro/fluentular",
   "keywords": ["ruby", "sinatra", "fluentd"],
   "website": "https://fluentular.herokuapp.com",
   "stack": "container"
