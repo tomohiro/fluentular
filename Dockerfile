@@ -6,7 +6,8 @@ COPY Gemfile.lock .
 
 RUN set -ex \
     && apk add --update --no-cache build-base=0.5-r1 \
-    && bundle install --frozen --jobs=4 --without="test:development" \
+    && bundle config frozen true
+    && bundle install --jobs=4 --without="test:development" \
     && rm -rf "${BUNDLE_PATH}/cache/*"
 
 # Build for Sinatra app
