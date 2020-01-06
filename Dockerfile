@@ -12,7 +12,7 @@ RUN set -ex \
 
 # Build for Sinatra app
 FROM ruby:2.7.0-alpine3.11
-COPY --from=bundle /usr/local/bundle /usr/local/bundle
+COPY --from=bundle ${BUNDLE_PATH} ${BUNDLE_PATH}
 
 ENV RACK_ENV=deployment
 
