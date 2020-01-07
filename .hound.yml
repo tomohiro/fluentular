@@ -1,4 +1,5 @@
 # Disable Hound's default RuboCop config
 #   http://help.houndci.com/configuration/rubocop
 rubocop:
+  config_file: .rubocop.yml
   enabled: false

@@ -1,8 +1,3 @@
-# Set specify config file
-#   http://help.houndci.com/configuration/rubocop
-rubocop:
-  config_file: .rubocop.yml
-
 # Add `rubocop-rspec` as optional plugin
 require:
   - rubocop-performance
