@@ -101,6 +101,6 @@ describe Fluentular do
     before { get '/NOT_EXISTS_PAGE' }
 
     it { is_expected.to be_not_found }
-    it { is_expected.to match '<h1>Not Found</h1>' }
+    it { is_expected.to match 'GET /NOT_EXISTS_PAGE' }
   end
 end
