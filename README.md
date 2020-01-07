@@ -6,7 +6,7 @@ Fluentular
 a Fluentd regular expression editor
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/)
-[![Build Status](https://img.shields.io/travis/tomohiro/fluentular.svg?style=flat-square&logo=travis)](https://travis-ci.org/tomohiro/fluentular)
+[![Build Status](https://img.shields.io/travis/com/tomohiro/fluentular.svg?style=flat-square&logo=travis)](https://travis-ci.com/tomohiro/fluentular)
 [![Coverage Status](https://img.shields.io/coveralls/tomohiro/fluentular.svg?style=flat-square&logo=coveralls)](https://coveralls.io/github/tomohiro/fluentular)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability-percentage/tomohiro/fluentular.svg?style=flat-square&logo=code-climate)](https://codeclimate.com/github/tomohiro/fluentular)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-success?style=flat-square&logo=dependabot)](https://libraries.io/github/tomohiro/fluentular)
