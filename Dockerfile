@@ -1,5 +1,5 @@
 # Build for install dependency RubyGems
-FROM ruby:2.7.0-alpine3.11 AS bundle
+FROM ruby:2.7.1-alpine3.11 AS bundle
 
 COPY Gemfile .
 COPY Gemfile.lock .
@@ -11,7 +11,7 @@ RUN set -ex \
     && rm -rf "${BUNDLE_PATH}/cache/*"
 
 # Build for Sinatra app
-FROM ruby:2.7.0-alpine3.11
+FROM ruby:2.7.1-alpine3.11
 COPY --from=bundle ${BUNDLE_PATH} ${BUNDLE_PATH}
 
 ENV RACK_ENV=deployment
