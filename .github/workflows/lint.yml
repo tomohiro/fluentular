@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
