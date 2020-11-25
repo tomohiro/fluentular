@@ -17,12 +17,9 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - run: bundle exec rspec
-
-  coveralls:
-    needs: rspec
-    runs-on: ubuntu-latest
-    steps:
-    - uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run RSpec
+        run: bundle exec rspec
+      - name: Send coverage report to Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
