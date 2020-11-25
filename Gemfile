@@ -8,12 +8,20 @@ gem 'haml'
 gem 'puma'
 gem 'sinatra'
 
-group :test, :development do
+group :development do
+  gem 'debase'
+  gem 'ruby-debug-ide'
+  gem 'shotgun'
+end
+
+group :test do
+  # Testing tools
   gem 'coveralls', require: false
   gem 'rack-test'
   gem 'rspec'
+
+  # Lint tools
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rspec'
-  gem 'shotgun'
 end

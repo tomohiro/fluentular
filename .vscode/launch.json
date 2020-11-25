@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug server",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/shotgun",
+      "args": [
+        "--server",
+        "puma",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8080"
+      ],
+      "useBundler": true
+    }
+  ]
+}
