@@ -11,7 +11,7 @@ a Fluentd regular expression editor
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-success?style=flat-square&logo=dependabot)](https://github.com/tomohiro/fluentular/network/dependencies)
 
 
-![Fluentular Screenshot](https://cloud.githubusercontent.com/assets/54254/11119798/642cf592-898f-11e5-906d-527bef2db8c3.png)
+![Fluentular Screenshot](https://user-images.githubusercontent.com/54254/100218981-c85b8280-2f58-11eb-8cab-856c1e09c48e.png)
 
 
 Platforms
