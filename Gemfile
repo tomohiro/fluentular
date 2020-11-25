@@ -16,9 +16,10 @@ end
 
 group :test do
   # Testing tools
-  gem 'coveralls', require: false
   gem 'rack-test'
   gem 'rspec'
+  gem 'simplecov', require: false
+  gem 'simplecov-lcov', require: false
 
   # Lint tools
   gem 'rubocop'
