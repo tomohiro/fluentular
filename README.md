@@ -31,11 +31,11 @@ Platforms
 
 ### Docker
 
-You can download and run Fluentular container from [DockerHub](https://registry.hub.docker.com/r/tomohiro/fluentular):
+You can download and run Fluentular container from [DockerHub](https://hub.docker.com/r/tomohiro/fluentular/):
 
 ```
-$ docker pull tomohiro/fluentular
-$ docker run -d -p 8080:8080 tomohiro/fluentular
+$ docker pull tomohiro/fluentular:latest
+$ docker run -d -p 8080:8080 tomohiro/fluentular:latest
 ```
 
 ### AWS Elastic Beanstalk
@@ -44,7 +44,7 @@ Supported Platforms:
 
 Platform | Version
 -------- | ---------------------------------------------------------------------
-Ruby     | Ruby 2.7.1 (Puma)
+Ruby     | Ruby 2.7.2 (Puma)
 Docker   | 18.09.0 or later
 
 
