@@ -1,6 +1,4 @@
-# Fluentular
-[![Heroku App](https://img.shields.io/badge/heroku-ready-430098.svg?style=flat-square&logo=heroku&logoColor=white)](https://fluentular.herokuapp.com)
-[![LICENSE](https://img.shields.io/github/license/tomohiro/fluentular.svg?style=flat-square)](LICENSE)
+# Fluentular [![Heroku App](https://img.shields.io/badge/heroku-ready-430098.svg?style=flat-square&logo=heroku&logoColor=white)](https://fluentular.herokuapp.com) [![LICENSE](https://img.shields.io/github/license/tomohiro/fluentular.svg?style=flat-square)](LICENSE)
 
 a Fluentd regular expression editor
 
