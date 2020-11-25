@@ -15,5 +15,4 @@ jobs:
       - uses: docker/build-push-action@v2
         with:
           push: false
-          tags: tomohiro/fluentular:latest
           cache-from: type=registry,ref=tomohiro/fluentular:latest
