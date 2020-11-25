@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+   {
+      "label": "rubocop",
+      "command": "${workspaceRoot}/bin/rubocop",
+      "args": [
+        "--parallel"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "rspec",
+      "command": "${workspaceRoot}/bin/rspec",
+      "problemMatcher": []
+    }
+  ]
+}

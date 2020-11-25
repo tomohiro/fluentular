@@ -8,12 +8,21 @@ gem 'haml'
 gem 'puma'
 gem 'sinatra'
 
-group :test, :development do
-  gem 'coveralls', require: false
+group :development do
+  gem 'debase'
+  gem 'ruby-debug-ide'
+  gem 'shotgun'
+end
+
+group :test do
+  # Testing tools
   gem 'rack-test'
   gem 'rspec'
+  gem 'simplecov', require: false
+  gem 'simplecov-lcov', require: false
+
+  # Lint tools
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rspec'
-  gem 'shotgun'
 end
