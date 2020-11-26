@@ -7,14 +7,13 @@ gem 'fluentd'
 gem 'haml'
 gem 'puma'
 gem 'sinatra'
+gem 'sinatra-contrib'
 
-group :development do
+group :development, :test do
+  # Debug tools
   gem 'debase'
   gem 'ruby-debug-ide'
-  gem 'shotgun'
-end
 
-group :test do
   # Testing tools
   gem 'rack-test'
   gem 'rspec'

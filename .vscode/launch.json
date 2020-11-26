@@ -5,7 +5,7 @@
       "name": "Debug server",
       "type": "Ruby",
       "request": "launch",
-      "program": "${workspaceRoot}/bin/shotgun",
+      "program": "${workspaceRoot}/bin/rackup",
       "args": [
         "--server",
         "puma",

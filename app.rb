@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'sinatra'
+require 'sinatra/reloader' if development?
+
 require 'fluent/env'
 require 'fluent/version'
 require 'fluent/engine'
