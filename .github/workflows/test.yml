@@ -3,8 +3,10 @@ name: Test
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
+    branches:
+      - main
 
 jobs:
   rspec:
@@ -14,7 +16,8 @@ jobs:
       BUNDLE_WITHOUT: development
     steps:
       - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
       - name: Run RSpec
