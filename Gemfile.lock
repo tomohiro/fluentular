@@ -19,7 +19,7 @@ GEM
       tzinfo (>= 1.0, < 3.0)
       tzinfo-data (~> 1.0)
       yajl-ruby (~> 1.0)
-    haml (5.2.0)
+    haml (5.2.1)
       temple (>= 0.8.0)
       tilt
     http_parser.rb (0.6.0)
