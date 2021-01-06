@@ -5,7 +5,7 @@ COPY Gemfile .
 COPY Gemfile.lock .
 
 RUN set -ex \
-    && apk add --update --no-cache curl=7.67.0-r1 build-base=0.5-r1 \
+    && apk add --update --no-cache curl build-base \
     && bundle config frozen true \
     && bundle install --jobs=4 --without="test:development" \
     && rm -rf "${BUNDLE_PATH}/cache/*"
