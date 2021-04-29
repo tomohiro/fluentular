@@ -7,8 +7,8 @@ Supported Versions
 
 Version   | Supported
 --------- | --------------------------------------------------------------------
+v1.12.x   | Maintenance
 v1.11.x   | Maintenance
-v1.10.x   | Maintenance
 < v1.10.1 | EOL
 
 
