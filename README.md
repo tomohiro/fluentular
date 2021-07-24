@@ -41,7 +41,7 @@ Supported Platforms:
 
 Platform | Version
 -------- | ---------------------------------------------------------------------
-Ruby     | Ruby 2.7.1 (Puma)
+Ruby     | Ruby 2.7.4 (Puma)
 Docker   | 18.09.0 or later
 
 
