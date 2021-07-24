@@ -13,6 +13,7 @@ group :development, :test do
   # Debug tools
   gem 'debase'
   gem 'ruby-debug-ide'
+  gem 'solargraph'
 
   # Testing tools
   gem 'rack-test'
