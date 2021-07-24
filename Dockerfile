@@ -1,6 +1,7 @@
 # Build for install dependency RubyGems
 FROM ruby:2.7.4-alpine3.14 AS bundle
 
+WORKDIR /tmp
 COPY Gemfile .
 COPY Gemfile.lock .
 
