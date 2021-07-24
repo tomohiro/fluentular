@@ -8,4 +8,5 @@
     },
   },
   "ruby.format": "rubocop", // use rubocop for formatting
+  "solargraph.useBundler": true,
 }
