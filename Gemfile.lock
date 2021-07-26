@@ -114,7 +114,7 @@ GEM
       rack-protection (= 2.1.0)
       sinatra (= 2.1.0)
       tilt (~> 2.0)
-    solargraph (0.42.4)
+    solargraph (0.43.0)
       backport (~> 1.2)
       benchmark
       bundler (>= 1.17.2)
