@@ -54,7 +54,7 @@ GEM
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rainbow (3.0.0)
-    rake (13.0.1)
+    rake (13.0.6)
     regexp_parser (2.1.1)
     reverse_markdown (2.0.0)
       nokogiri
@@ -89,7 +89,7 @@ GEM
     rubocop-rspec (2.4.0)
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
-    ruby-debug-ide (0.7.2)
+    ruby-debug-ide (0.7.3)
       rake (>= 0.8.1)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.2)
