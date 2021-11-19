@@ -3,7 +3,7 @@ GEM
   specs:
     ast (2.4.2)
     backport (1.2.0)
-    benchmark (0.1.1)
+    benchmark (0.2.0)
     concurrent-ruby (1.1.9)
     cool.io (1.7.1)
     debase (0.2.4.1)
@@ -47,7 +47,7 @@ GEM
       ast (~> 2.4.1)
     puma (5.5.2)
       nio4r (~> 2.0)
-    racc (1.5.2)
+    racc (1.6.0)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
@@ -56,7 +56,7 @@ GEM
     rainbow (3.0.0)
     rake (13.0.6)
     regexp_parser (2.1.1)
-    reverse_markdown (2.0.0)
+    reverse_markdown (2.1.1)
       nokogiri
     rexml (3.2.5)
     rspec (3.10.0)
@@ -81,7 +81,7 @@ GEM
       rubocop-ast (>= 1.12.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.12.0)
+    rubocop-ast (1.13.0)
       parser (>= 3.0.1.1)
     rubocop-performance (1.12.0)
       rubocop (>= 1.7.0, < 2.0)
@@ -113,7 +113,7 @@ GEM
       rack-protection (= 2.1.0)
       sinatra (= 2.1.0)
       tilt (~> 2.0)
-    solargraph (0.44.0)
+    solargraph (0.44.1)
       backport (~> 1.2)
       benchmark
       bundler (>= 1.17.2)
