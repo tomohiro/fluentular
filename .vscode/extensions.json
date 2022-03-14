@@ -1,6 +1,10 @@
 {
   "recommendations": [
     "editorconfig.editorconfig",
+    // Please install following gems to use Ruby extensions.
+    //   gem install solargraph
+    //   gem install debase
+    //   gem install ruby-debug-ide
     "rebornix.ruby",
     "castwide.solargraph",
     "ms-azuretools.vscode-docker"

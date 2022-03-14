@@ -41,8 +41,8 @@ Supported Platforms:
 
 Platform | Version
 -------- | ---------------------------------------------------------------------
-Ruby     | Ruby 2.7.4 (Puma)
-Docker   | 18.09.0 or later
+Ruby     | Ruby 3.0.3 (Puma)
+Docker   | 20.10.12 or later
 
 
 #### Using EB Command Line Interface
