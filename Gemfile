@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '2.7.4'
+ruby '3.0.3'
 
 gem 'fluentd'
 gem 'haml'
@@ -10,11 +10,6 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 
 group :development, :test do
-  # Debug tools
-  gem 'debase'
-  gem 'ruby-debug-ide'
-  gem 'solargraph'
-
   # Testing tools
   gem 'rack-test'
   gem 'rspec'
