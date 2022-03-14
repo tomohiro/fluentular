@@ -146,7 +146,7 @@ __END__
     %footer.row.small-centered.columns
       %section.small-12.columns
         %p
-          &copy; 2012 - 2021 Made with
+          &copy; 2012 - 2022 Made with
           %i.fa.fa-heart
           by
           %a(href='https://github.com/tomohiro') Tomohiro Taira
