@@ -1,5 +1,5 @@
 # Build for install dependency RubyGems
-FROM ruby:3.0.3-alpine3.15 AS bundle
+FROM ruby:3.1.1-alpine3.15 AS bundle
 
 WORKDIR /tmp
 COPY Gemfile .
@@ -13,7 +13,7 @@ RUN set -ex \
     && rm -rf "${GEM_HOME}/cache/*"
 
 # Build for Sinatra app
-FROM ruby:3.0.3-alpine3.15
+FROM ruby:3.1.1-alpine3.15
 COPY --from=bundle ${GEM_HOME} ${GEM_HOME}
 
 ENV RACK_ENV=deployment
