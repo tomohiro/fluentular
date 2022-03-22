@@ -22,3 +22,5 @@ jobs:
       - uses: r7kamura/rubocop-problem-matchers-action@v1
       - name: Run RuboCop
         run: bundle exec rubocop --parallel
+      - name: Check Docker Compose configuration
+        run: docker compose config
