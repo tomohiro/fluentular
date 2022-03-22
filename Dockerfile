@@ -25,4 +25,4 @@ EXPOSE 8080
 ENTRYPOINT ["bundle"]
 CMD ["exec", "rackup", "--host", "0.0.0.0", "-p", "8080"]
 
-HEALTHCHECK CMD curl -s -S -o /dev/null http:/0:8080 || exit 1
+HEALTHCHECK CMD wget -q -O /dev/null http://0:8080 || exit 1
