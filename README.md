@@ -35,6 +35,20 @@ $ docker pull tomohiro/fluentular:latest
 $ docker run -d -p 8080:8080 tomohiro/fluentular:latest
 ```
 
+
+#### Own build
+
+Also you can build the app when after clone this repository:
+
+```
+$ cd fluentular
+$ docker compose up -d
+$ docker compose ps
+NAME                COMMAND                  SERVICE             STATUS              PORTS
+fluentular-app-1    "bundle exec rackup …"   app                 running (healthy)   0.0.0.0:8080->8080/tcp
+```
+
+
 ### AWS Elastic Beanstalk
 
 Supported Platforms:
