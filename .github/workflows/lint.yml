@@ -22,5 +22,11 @@ jobs:
       - uses: r7kamura/rubocop-problem-matchers-action@v1
       - name: Run RuboCop
         run: bundle exec rubocop --parallel
+  docker:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - name: Check Docker Compose configuration
         run: docker compose config
