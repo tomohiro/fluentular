@@ -41,4 +41,4 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Check Docker Compose configuration
-        run: docker compose config
+        run: docker compose convert
