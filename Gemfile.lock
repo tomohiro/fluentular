@@ -22,6 +22,7 @@ GEM
       temple (>= 0.8.0)
       tilt
     http_parser.rb (0.8.0)
+    kwalify (0.7.2)
     msgpack (1.4.5)
     multi_json (1.15.0)
     mustermann (1.1.1)
@@ -38,6 +39,10 @@ GEM
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rainbow (3.1.1)
+    reek (6.1.0)
+      kwalify (~> 0.7.0)
+      parser (~> 3.1.0)
+      rainbow (>= 2.0, < 4.0)
     regexp_parser (2.2.1)
     rexml (3.2.5)
     rspec (3.11.0)
@@ -111,6 +116,7 @@ DEPENDENCIES
   haml
   puma
   rack-test
+  reek
   rspec
   rubocop
   rubocop-performance

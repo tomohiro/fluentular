@@ -16,7 +16,8 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'simplecov-lcov', require: false
 
-  # Lint tools
+  # Lint/Analyse/Detect tools
+  gem 'reek'
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rspec'
