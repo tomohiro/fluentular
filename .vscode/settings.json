@@ -1,12 +1,16 @@
 {
-  // https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby
-  "ruby.useBundler": true,
-  "ruby.useLanguageServer": true, // use the internal language server (see below)
-  "ruby.lint": {
-    "rubocop": {
-      "useBundler": true // enable rubocop via bundler
+  "ruby": {
+    "useBundler": false,
+    "useLanguageServer": true,
+    "lint": {
+      "rubocop": {
+        "useBundler": true
+      },
+      "reek": {
+        "useBundler": true
+      }
     },
+    "format": "rubocop"
   },
-  "ruby.format": "rubocop", // use rubocop for formatting
-  "solargraph.useBundler": true,
+  "solargraph.useBundler": false,
 }
