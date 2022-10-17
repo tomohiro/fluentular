@@ -18,8 +18,9 @@ GEM
       tzinfo-data (~> 1.0)
       webrick (>= 1.4.2, < 1.8.0)
       yajl-ruby (~> 1.0)
-    haml (5.2.2)
-      temple (>= 0.8.0)
+    haml (6.0.7)
+      temple (>= 0.8.2)
+      thor
       tilt
     http_parser.rb (0.8.0)
     json (2.6.2)
@@ -101,6 +102,7 @@ GEM
       tilt (~> 2.0)
     strptime (0.2.5)
     temple (0.8.2)
+    thor (1.2.1)
     tilt (2.0.11)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
