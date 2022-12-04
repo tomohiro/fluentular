@@ -18,7 +18,7 @@ module Fluentular
   ].freeze
 end
 
-set :haml, format: :html5
+set :haml, escape_html: false
 
 get '/' do
   haml :index
