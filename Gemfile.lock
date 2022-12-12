@@ -18,7 +18,7 @@ GEM
       tzinfo-data (~> 1.0)
       webrick (>= 1.4.2, < 1.8.0)
       yajl-ruby (~> 1.0)
-    haml (6.0.12)
+    haml (6.1.1)
       temple (>= 0.8.2)
       thor
       tilt
