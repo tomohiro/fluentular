@@ -23,7 +23,7 @@ GEM
       thor
       tilt
     http_parser.rb (0.8.0)
-    json (2.6.2)
+    json (2.6.3)
     kwalify (0.7.2)
     msgpack (1.6.0)
     multi_json (1.15.0)
@@ -70,12 +70,12 @@ GEM
       rubocop-ast (>= 1.23.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.23.0)
+    rubocop-ast (1.24.0)
       parser (>= 3.1.1.0)
     rubocop-performance (1.15.1)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rspec (2.15.0)
+    rubocop-rspec (2.16.0)
       rubocop (~> 1.33)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
