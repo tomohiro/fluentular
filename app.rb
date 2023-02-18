@@ -8,6 +8,8 @@ require 'fluent/version'
 require 'fluent/engine'
 require 'fluent/plugin/parser_regexp'
 
+YJIT_STATUS = ENV.fetch('RUBYOPT', nil)&.match('--yjit') ? '+YJIT' : ''
+
 module Fluentular
   VERSION = ::Fluent::VERSION
 
@@ -150,6 +152,9 @@ __END__
           %i.fa.fa-heart
           by
           %a(href='https://github.com/tomohiro') Tomohiro Taira
+          \/ Powered by
+          %a(href='https://www.ruby-lang.org') Ruby
+          version #{RUBY_VERSION}-p#{RUBY_PATCHLEVEL} #{YJIT_STATUS}
 
 @@ index
 %div.row
