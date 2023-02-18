@@ -3,7 +3,7 @@
 a Fluentd regular expression editor
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/tomohiro/fluentular.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tomohiro/fluentular/)
-[![Build Status](https://img.shields.io/github/workflow/status/tomohiro/fluentular/Build?logo=github&style=flat-square)](https://github.com/tomohiro/fluentular/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/tomohiro/fluentular/.github/workflows/test.yml?branch=main&logo=github&style=flat-square)](https://github.com/tomohiro/fluentular/actions)
 [![Coverage Status](https://img.shields.io/coveralls/tomohiro/fluentular.svg?style=flat-square&logo=coveralls)](https://coveralls.io/github/tomohiro/fluentular)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability-percentage/tomohiro/fluentular.svg?style=flat-square&logo=code-climate)](https://codeclimate.com/github/tomohiro/fluentular)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-success?style=flat-square&logo=dependabot)](https://github.com/tomohiro/fluentular/network/dependencies)
