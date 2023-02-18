@@ -17,6 +17,7 @@ FROM ruby:3.2.1-alpine3.17
 COPY --from=bundle ${GEM_HOME} ${GEM_HOME}
 
 ENV RACK_ENV=deployment
+ENV RUBYOPT=--yjit
 
 WORKDIR /usr/src/app
 COPY . .
