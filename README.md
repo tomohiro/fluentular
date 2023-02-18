@@ -105,6 +105,6 @@ Acknowledgment
 LICENSE
 --------------------------------------------------------------------------------
 
-&copy; 2012 - 2022 Tomohiro Taira.
+&copy; 2012 - 2023 Tomohiro Taira.
 
 This project licensed under the MIT license. See [LICENSE](LICENSE) for details.
