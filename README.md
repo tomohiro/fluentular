@@ -17,8 +17,6 @@ Platforms
 
 - [Heroku](#heroku)
 - [Docker](#docker)
-- [AWS Elastic Beanstalk](#aws-elastic-beanstalk)
-- [Google App Engine](#google-app-engine)
 
 
 ### Heroku
@@ -35,7 +33,6 @@ $ docker pull tomohiro/fluentular:latest
 $ docker run -d -p 8080:8080 tomohiro/fluentular:latest
 ```
 
-
 #### Own build
 
 Also you can build the app when after clone this repository:
@@ -46,50 +43,6 @@ $ docker compose up -d
 $ docker compose ps
 NAME                COMMAND                  SERVICE             STATUS              PORTS
 fluentular-app-1    "bundle exec rackup …"   app                 running (healthy)   0.0.0.0:8080->8080/tcp
-```
-
-
-### AWS Elastic Beanstalk
-
-Supported Platforms:
-
-Platform | Version
--------- | ---------------------------------------------------------------------
-Ruby     | Ruby 3.1.1 (Puma)
-Docker   | 20.10.12 or later
-
-
-#### Using EB Command Line Interface
-
-Create an Application:
-
-```sh
-$ eb init # Choose a platform from Ruby or Docker
-```
-
-Create an Environment:
-
-```sh
-$ eb create
-```
-
-
-#### Using AWS Console
-
-You can use Dockerrun.aws.json when creating a new environment.
-
-https://fluentular.s3.amazonaws.com/Dockerrun.aws.json
-
-![Create a new environment](https://cloud.githubusercontent.com/assets/54254/11200269/0a94db62-8d18-11e5-8e9e-d9ccbd994eea.png)
-
-
-For more information, see [Deploying a Sinatra Application to AWS Elastic Beanstalk - Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_sinatra.html).
-
-
-### Google App Engine
-
-```sh
-$ gcloud preview app deploy
 ```
 
 
