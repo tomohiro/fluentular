@@ -9,6 +9,7 @@ end
 SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
 SimpleCov.start
 
+Warning[:deprecated] = true
 ENV['RACK_ENV'] = 'test'
 $LOAD_PATH.unshift(File.expand_path('../', File.dirname(__FILE__)))
 
