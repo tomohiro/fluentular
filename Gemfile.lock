@@ -18,7 +18,7 @@ GEM
       tzinfo-data (~> 1.0)
       webrick (~> 1.4)
       yajl-ruby (~> 1.0)
-    haml (6.1.1)
+    haml (6.1.2)
       temple (>= 0.8.2)
       thor
       tilt
@@ -111,9 +111,9 @@ GEM
       sinatra (= 3.0.6)
       tilt (~> 2.0)
     strptime (0.2.5)
-    temple (0.9.1)
-    thor (1.2.1)
-    tilt (2.1.0)
+    temple (0.10.2)
+    thor (1.2.2)
+    tilt (2.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2023.3)
