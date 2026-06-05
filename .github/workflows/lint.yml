@@ -10,7 +10,7 @@ on:
 
 jobs:
   rubocop:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -23,7 +23,7 @@ jobs:
       - name: Run RuboCop
         run: bundle exec rubocop --parallel
   reek:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -35,7 +35,7 @@ jobs:
       - name: Run Reek
         run: bundle exec reek $(git ls-files '*.rb')
   docker:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v2
         with:
