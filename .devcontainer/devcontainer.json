@@ -1,7 +1,9 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/ruby:3.4",
+  "name": "Fluentular Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/ruby:4",
   "containerEnv": {
     "BUNDLE_PATH": "/usr/local/bundle",
     "TZ": "Asia/Tokyo"
-  }
+  },
+  "postCreateCommand": "bundle install"
 }
