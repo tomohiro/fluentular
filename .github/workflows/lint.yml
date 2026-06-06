@@ -15,7 +15,7 @@ jobs:
   rubocop:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Setup Ruby
@@ -28,7 +28,7 @@ jobs:
   reek:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Setup Ruby
@@ -40,7 +40,7 @@ jobs:
   docker:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Check Docker Compose configuration
