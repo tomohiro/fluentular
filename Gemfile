@@ -6,13 +6,13 @@ ruby '4.0.4'
 gem 'fluentd'
 gem 'haml'
 gem 'puma'
+gem 'rackup'
 gem 'sinatra'
 gem 'sinatra-contrib'
 
 group :development, :test do
   # Testing tools
   gem 'rack-test'
-  gem 'rackup'
   gem 'rspec'
   gem 'simplecov', require: false
   gem 'simplecov-lcov', require: false
