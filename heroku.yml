@@ -1,6 +1,0 @@
-build:
-  languages:
-    - ruby
-
-run:
-  web: bundle exec rackup config.ru -p ${PORT}

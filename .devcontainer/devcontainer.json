@@ -1,6 +1,11 @@
 {
   "name": "Fluentular Dev Environment",
   "image": "mcr.microsoft.com/devcontainers/ruby:4",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:3": {
+      "moby": false
+    }
+  },
   "containerEnv": {
     "BUNDLE_PATH": "/usr/local/bundle",
     "TZ": "Asia/Tokyo"
