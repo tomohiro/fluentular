@@ -21,6 +21,7 @@ module Fluentular
 end
 
 set :haml, escape_html: false
+set :protection, false if development?
 
 get '/' do
   haml :index
