@@ -12,6 +12,7 @@ gem 'sinatra-contrib'
 group :development, :test do
   # Testing tools
   gem 'rack-test'
+  gem 'rackup'
   gem 'rspec'
   gem 'simplecov', require: false
   gem 'simplecov-lcov', require: false
