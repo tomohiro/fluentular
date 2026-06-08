@@ -4,5 +4,5 @@
   "repository": "https://github.com/tomohiro/fluentular",
   "keywords": ["ruby", "sinatra", "fluentd"],
   "website": "https://fluentular.herokuapp.com",
-  "stack": "container"
+  "stack": "heroku-26"
 }
